@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cdaLarochelleApp', [])
+angular.module('cdaLarochelleApp', ['newsServices'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

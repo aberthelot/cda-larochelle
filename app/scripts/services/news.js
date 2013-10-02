@@ -1,16 +1,21 @@
 'use strict';
 
-angular.module('cdaLarochelleApp')
+angular.module('newsServices', [])
   .factory('news', function () {
     // Service logic
     // ...
 
-    var meaningOfLife = 42;
+    // 
+    var awesomeThings = [
+      'Test A',
+      'Test B',
+      'Test C'
+    ];
 
     // Public API here
     return {
       someMethod: function () {
-        return meaningOfLife;
+        return awesomeThings;
       }
     };
   });
