@@ -11,8 +11,8 @@ angular.module('cdaLarochelleApp', [])
         templateUrl: 'views/bo-cms.html',
         controller: 'BoCmsCtrl'
       })
-      .when('/search-engin', {
-        templateUrl: 'views/serach-engine.html',
+      .when('/search-engine', {
+        templateUrl: 'views/search-engine.html',
         controller: 'SearchEngineCtrl'
       })
       .otherwise({
