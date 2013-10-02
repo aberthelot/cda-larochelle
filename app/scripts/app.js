@@ -11,6 +11,10 @@ angular.module('cdaLarochelleApp', [])
         templateUrl: 'views/bo-cms.html',
         controller: 'BoCmsCtrl'
       })
+      .when('/search-engin', {
+        templateUrl: 'views/serach-engine.html',
+        controller: 'SearchEngineCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
