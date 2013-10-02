@@ -1,21 +1,10 @@
 'use strict';
 
-angular.module('newsServices', [])
-  .factory('news', function () {
+angular.module('newsServices', ['ngResource'])
+  .factory('news', function ($resource) {
     // Service logic
     // ...
 
-    // 
-    var awesomeThings = [
-      'Test A',
-      'Test B',
-      'Test C'
-    ];
+    return $resource('/scripts/services/mocks/news.json');
 
-    // Public API here
-    return {
-      someMethod: function () {
-        return awesomeThings;
-      }
-    };
   });
