@@ -1,14 +1,30 @@
-<!-- Présentation -->
-<section class="container presentation">
+
+<section class="">
   <div class="row">
     <div class="col-sm-4">
-      <h1>TEST</h1>
+    <div class="well well-complementary">
+      <!-- formulaire de recherche -->
+      <form name="searchForm" class="form-horizontal">
+        <input type="text" ng-model="search" class="form-control" placeholder="Rechercher ..." autofocus>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" ng-model="topic.isScheduled" value="option1" ng-init="topic.isScheduled=true">
+              <i class="icon-calendar-empty danger"></i> Non programmée uniquement
+            </input>
+          </label>
+        </div>
+      </form>
     </div>
-    <ul>
-      <li ng-repeat="new in news">
-      	<i class="icon-chevron-right icon-white"></i>
-      	{{new.title}} - {{new.author}}
-      </li>
-  	</ul>
+      <ul class="list-unstyled list-topic">
+        <li ng-repeat="topic in topics | filter : search | filter : '!'+topic.isScheduled">
+          <i ng-show="topic.isScheduled" class="icon-calendar success"></i>
+          <i ng-show="!topic.isScheduled" class="icon-calendar-empty danger"></i>
+          {{topic.title}} - {{topic.author}}
+        </li>
+      <ul>
+    </div>
+    <div class="col-sm-8">
+
+    </div>
   </div>
 </section>

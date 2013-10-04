@@ -2,5 +2,5 @@
 
 angular.module('cdaLarochelleApp')
   .controller('BoCmsCtrl', function ($scope, Topic) {
-    $scope.news = Topic.query();
+    $scope.topics = Topic.query();
   });

@@ -1,16 +1,30 @@
 [
-
   {
     "title" : "Test A",
-    "author" : "Alvin Berthelot"
+    "author" : "Alvin Berthelot",
+    "created" : "2006-12-17T22:14:37 -01:00",
+    "isScheduled" : true,
+    "scheduledBegin" : "2006-12-17T22:14:37 -01:00",
+    "scheduledEnd" : "2006-12-17T22:14:37 -01:00",
+    "text" : "A la une aujourd'hui"
   },
   {
     "title" : "Test B",
-    "author" : "Alvin Berthelot"
+    "author" : "Alvin Berthelot",
+    "created" : "2006-12-17T22:14:37 -01:00",
+    "isScheduled" : false,
+    "scheduledBegin" : "2006-12-17T22:14:37 -01:00",
+    "scheduledEnd" : "2006-12-17T22:14:37 -01:00",
+    "text" : "A la une aujourd'hui"
   },
   {
     "title" : "Test C",
-    "author" : "Alvin Berthelot"
+    "author" : "Alvin Berthelot",
+    "created" : "2006-12-17T22:14:37 -01:00",
+    "isScheduled" : true,
+    "scheduledBegin" : "2006-12-17T22:14:37 -01:00",
+    "scheduledEnd" : "2006-12-17T22:14:37 -01:00",
+    "text" : "A la une aujourd'hui"
   }
 ]
 
