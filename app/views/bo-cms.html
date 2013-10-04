@@ -16,7 +16,7 @@
       </form>
     </div>
       <ul class="list-unstyled list-topic">
-        <li ng-repeat="topic in topics | filter : search | filter : '!'+topic.isScheduled" drag="topic">
+        <li ng-repeat="topic in topics | filter : search | filter : '!'+topic.isScheduled" drag="topic" dragStyle="element-drag">
           <i ng-show="topic.isScheduled" class="icon-calendar success"></i>
           <i ng-show="!topic.isScheduled" class="icon-calendar-empty danger"></i>
           {{topic.title}} - {{topic.author}}
@@ -40,34 +40,34 @@
         </thead>
         <tbody>
           <tr class="week">
-            <td><div class="day">jh kh</div></td>
-            <td><div class="day">jh kh</div></td>
-            <td><div class="day">jh kh</div></td>
-            <td><div class="day">jh kh</div></td>
-            <td><div class="day">jh kh</div></td>
-            <td><div class="day">jh kh</div></td>
-            <td><div class="day">jh kh</div></td>
-            <td><div class="day">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">Ajh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
           </tr>
           <tr class="week">
-            <td><div class="day">jh kh</div></td>
-            <td><div class="day">jh kh</div></td>
-            <td><div class="day">jh kh</div></td>
-            <td><div class="day">jh kh</div></td>
-            <td><div class="day">jh kh</div></td>
-            <td><div class="day">jh kh</div></td>
-            <td><div class="day">jh kh</div></td>
-            <td><div class="day">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
           </tr>
           <tr class="week">
-            <td><div class="day">jh kh</div></td>
-            <td><div class="day">jh kh</div></td>
-            <td><div class="day">jh kh</div></td>
-            <td><div class="day">jh kh</div></td>
-            <td><div class="day">jh kh</div></td>
-            <td><div class="day">jh kh</div></td>
-            <td><div class="day">jh kh</div></td>
-            <td><div class="day">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
+            <td><div class="day" drop="topic" dropStyle="element-drop">jh kh</div></td>
           </tr>
         </tbody>
       </table>
