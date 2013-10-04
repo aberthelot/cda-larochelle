@@ -1,6 +1,9 @@
 'use strict';
 
-angular.module('cdaLarochelleApp', ['TopicServices'])
+angular.module('cdaLarochelleApp', [
+  'TopicServices',
+  'draganddropUI'
+  ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
