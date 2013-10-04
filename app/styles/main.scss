@@ -5,17 +5,10 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 // Définitions des imports
 ////////////////////////////////////////////////////////////////////////
 
-// @import "buttons.scss";
-// @import "fonts.scss";
 @import "grids.scss";
-// @import "jumbotron.scss";
 @import "mixins.scss";
 @import "type.scss";
 @import "variables.scss";
-// @import "wells.scss";
-
-@import "ippevents-mixins.scss";
-
 
 /* Put your CSS here */
 html, body {
@@ -31,6 +24,34 @@ body {
 }
 .success {
   color: $success;
+}
+
+.table-calendar {
+  > tbody {
+    > tr:nth-child(odd) {
+      > td,
+      > th {
+        background-color: $week-background-odd;
+      }
+    }
+    > tr:nth-child(even) {
+      > td,
+      > th {
+        background-color: $week-background-even;
+      }
+    }
+  }
+}
+// tr.week {
+//   td {
+//     background-color: green;
+//   }
+// }
+
+.day {
+  // background-color: $day-background;
+  // background-color: green;
+  width: 80px;
 }
 
 ul.list-topic {
