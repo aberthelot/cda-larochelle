@@ -16,13 +16,14 @@
       </form>
     </div>
       <ul class="list-unstyled list-topic">
-        <li ng-repeat="topic in topics | filter : search | filter : '!'+topic.isScheduled" drag="topic" dragStyle="element-drag" data-id="" data-title="{{topic.title}}" data-category="{{topic.category}}">
+        <li ng-repeat="topic in topics | filter : search | filter : '!'+topic.isScheduled" drag="topic" dragStyle="element-drag" data-id="" data-title="{{topic.title}}" data-category-title="{{topic.category.title}}" data-category-id="{{topic.category.id}}">
           <p>
+            <i ng-show="topic.isScheduled" class="icon-calendar success"></i>
+            <i ng-show="!topic.isScheduled" class="icon-calendar-empty danger"></i>
             <span class="label label-category-{{topic.category.id}}">{{topic.category.title}}</span>
           </p>
-          <i ng-show="topic.isScheduled" class="icon-calendar success"></i>
-          <i ng-show="!topic.isScheduled" class="icon-calendar-empty danger"></i>
-          {{topic.title}} - {{topic.author}}
+          <p>{{topic.title}}</p>
+          <p>{{topic.author}}</p>
         </li>
       <ul>
     </section>

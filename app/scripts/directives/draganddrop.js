@@ -11,7 +11,8 @@ draganddropUI.directive('drag', ["$rootScope", function($rootScope) {
     **/
     evt.originalEvent.dataTransfer.setData('data-id', evt.target.getAttribute('data-id'));
     evt.originalEvent.dataTransfer.setData('data-title', evt.target.getAttribute('data-title'));
-    evt.originalEvent.dataTransfer.setData('data-category', evt.target.getAttribute('data-category'));
+    evt.originalEvent.dataTransfer.setData('data-category-id', evt.target.getAttribute('data-category-id'));
+    evt.originalEvent.dataTransfer.setData('data-category-title', evt.target.getAttribute('data-category-title'));
     // evt.dataTransfer.effectAllowed = 'move';
   };
   function dragEnd(evt, element, dragStyle) {
@@ -51,9 +52,11 @@ draganddropUI.directive('drop', function() {
   function drop(evt, element, dropStyle) {
     // evt.preventDefault();
 
-    evt.target.innerHTML += '<p>' + evt.originalEvent.dataTransfer.getData('data-id') + '</p>';
+    // evt.target.innerHTML += '<p>' + evt.originalEvent.dataTransfer.getData('data-id') + '</p>';
+    evt.target.innerHTML += '<p><span class="label label-category-'
+    + evt.originalEvent.dataTransfer.getData('data-category-id')
+    +'">' + evt.originalEvent.dataTransfer.getData('data-category-title') + '</p>';
     evt.target.innerHTML += '<p>' + evt.originalEvent.dataTransfer.getData('data-title') + '</p>';
-    evt.target.innerHTML += '<p>' + evt.originalEvent.dataTransfer.getData('data-category') + '</p>';
 
     element.removeClass(dropStyle);
   };
