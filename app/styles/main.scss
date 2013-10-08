@@ -94,6 +94,14 @@ ul.list-topic {
   } 
 }
 
+.label-category-1 {
+  @include label-variant(green);
+}
+
+.label-category-2 {
+  @include label-variant(purple);
+}
+
 // ul.list-light {
 //   li {
 //     background-clip: content-box;

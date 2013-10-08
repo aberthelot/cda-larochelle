@@ -9,7 +9,9 @@ draganddropUI.directive('drag', ["$rootScope", function($rootScope) {
     /**
     on ne peut pas utiliser directement evt.dataTransfer à cause jQuery ...
     **/
-    evt.originalEvent.dataTransfer.setData('text-html', evt.target.innerHTML);
+    evt.originalEvent.dataTransfer.setData('data-id', evt.target.getAttribute('data-id'));
+    evt.originalEvent.dataTransfer.setData('data-title', evt.target.getAttribute('data-title'));
+    evt.originalEvent.dataTransfer.setData('data-category', evt.target.getAttribute('data-category'));
     // evt.dataTransfer.effectAllowed = 'move';
   };
   function dragEnd(evt, element, dragStyle) {
@@ -49,7 +51,9 @@ draganddropUI.directive('drop', function() {
   function drop(evt, element, dropStyle) {
     // evt.preventDefault();
 
-    evt.target.innerHTML += '<p>' + evt.originalEvent.dataTransfer.getData('text-html') + '</p>';
+    evt.target.innerHTML += '<p>' + evt.originalEvent.dataTransfer.getData('data-id') + '</p>';
+    evt.target.innerHTML += '<p>' + evt.originalEvent.dataTransfer.getData('data-title') + '</p>';
+    evt.target.innerHTML += '<p>' + evt.originalEvent.dataTransfer.getData('data-category') + '</p>';
 
     element.removeClass(dropStyle);
   };

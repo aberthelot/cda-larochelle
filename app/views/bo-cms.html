@@ -16,9 +16,9 @@
       </form>
     </div>
       <ul class="list-unstyled list-topic">
-        <li ng-repeat="topic in topics | filter : search | filter : '!'+topic.isScheduled" drag="topic" dragStyle="element-drag">
+        <li ng-repeat="topic in topics | filter : search | filter : '!'+topic.isScheduled" drag="topic" dragStyle="element-drag" data-id="" data-title="{{topic.title}}" data-category="{{topic.category}}">
           <p>
-            <span class="label label-primary">{{topic.category}}</span>
+            <span class="label label-category-{{topic.category.id}}">{{topic.category.title}}</span>
           </p>
           <i ng-show="topic.isScheduled" class="icon-calendar success"></i>
           <i ng-show="!topic.isScheduled" class="icon-calendar-empty danger"></i>
