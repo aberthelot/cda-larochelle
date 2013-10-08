@@ -17,6 +17,9 @@
     </div>
       <ul class="list-unstyled list-topic">
         <li ng-repeat="topic in topics | filter : search | filter : '!'+topic.isScheduled" drag="topic" dragStyle="element-drag">
+          <p>
+            <span class="label label-primary">{{topic.category}}</span>
+          </p>
           <i ng-show="topic.isScheduled" class="icon-calendar success"></i>
           <i ng-show="!topic.isScheduled" class="icon-calendar-empty danger"></i>
           {{topic.title}} - {{topic.author}}
