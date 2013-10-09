@@ -49,9 +49,11 @@ body {
 // }
 
 .day {
-  // background-color: $day-background;
+  background-color: $day-background;
   // background-color: green;
+  height: 80px;
   width: 80px;
+
 }
 
 .element-drag {

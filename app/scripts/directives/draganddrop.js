@@ -13,6 +13,7 @@ draganddropUI.directive('drag', ["$rootScope", function($rootScope) {
     evt.originalEvent.dataTransfer.setData('data-title', evt.target.getAttribute('data-title'));
     evt.originalEvent.dataTransfer.setData('data-category-id', evt.target.getAttribute('data-category-id'));
     evt.originalEvent.dataTransfer.setData('data-category-title', evt.target.getAttribute('data-category-title'));
+    evt.originalEvent.dataTransfer.setData('data-dateBegin', evt.target.getAttribute('data-dateBegin'));
     // evt.dataTransfer.effectAllowed = 'move';
   };
   function dragEnd(evt, element, dragStyle) {
@@ -50,13 +51,52 @@ draganddropUI.directive('drop', function() {
     evt.preventDefault();
   };
   function drop(evt, element, dropStyle) {
+
     // evt.preventDefault();
 
-    // evt.target.innerHTML += '<p>' + evt.originalEvent.dataTransfer.getData('data-id') + '</p>';
-    evt.target.innerHTML += '<p><span class="label label-category-'
-    + evt.originalEvent.dataTransfer.getData('data-category-id')
-    +'">' + evt.originalEvent.dataTransfer.getData('data-category-title') + '</p>';
-    evt.target.innerHTML += '<p>' + evt.originalEvent.dataTransfer.getData('data-title') + '</p>';
+    var check = true;
+
+    //
+    var title = evt.originalEvent.dataTransfer.getData('data-title');
+    var category_id = evt.originalEvent.dataTransfer.getData('data-category-id');
+    var category_title = evt.originalEvent.dataTransfer.getData('data-category-title');
+
+
+    // on initialise l'élément où doit s'effectuer le drop par défaut
+    var droppableElement = evt.target;
+    // on s'assure d'être dans le bon élément, sinon on parcourt les ancêtres
+    while (!droppableElement.hasAttribute('drop')) {
+      droppableElement = droppableElement.parentNode;
+    }
+
+    // alert('DIV ::' + droppableElement.innerHTML);
+
+
+    // sélection des éléments déjà prtésents
+    var droppedArticles = droppableElement.querySelectorAll('article');
+
+    for (var i = 0; i < droppedArticles.length; i++) {
+      // alert('TEST :: ' + droppedArticles[i].innerHTML);
+      if (droppedArticles[i].getAttribute('data-category-id') == category_id) {
+        alert('SOUCI');
+        check = false;
+      }
+    };
+
+    if (check) {
+      // evt.target.innerHTML += '<p>' + evt.originalEvent.dataTransfer.getData('data-id') + '</p>';
+      droppableElement.innerHTML += '<article'
+      + ' data-category-id="' + category_id +'">'
+        + '<p>'
+          + '<span class="label label-category-'
+          + category_id +'">'
+            + category_title
+          + '</span>'
+        + '</p>'
+        + '<p>' + title + '</p>'
+      // evt.target.innerHTML += '<p> <button>test</button>';
+        + '</article>';
+    }
 
     element.removeClass(dropStyle);
   };
