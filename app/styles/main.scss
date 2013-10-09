@@ -57,31 +57,19 @@ body {
 }
 
 .element-drag {
-
-  -moz-box-shadow: inset 0px 0px $topic-drag-shadow-spread $topic-drag-shadow-blur $topic-drag-shadow-color;
-  -webkit-box-shadow: inset 0px 0px $topic-drag-shadow-spread $topic-drag-shadow-blur $topic-drag-shadow-color;
-  -o-box-shadow: inset 0px 0px $topic-drag-shadow-spread $topic-drag-shadow-blur $topic-drag-shadow-color;
-  box-shadow: inset 0px 0px $topic-drag-shadow-spread $topic-drag-shadow-blur $topic-drag-shadow-color;
-  filter:progid:DXImageTransform.Microsoft.Shadow(color=$topic-drag-shadow-color, Direction=NaN, Strength=12);
-
-
-  // background-color: red !important;
-  // border: 10px solid green;
-  // background-color: green;
-  // width: 80px;
+  @include element-drag($topic-drag-shadow-color);
 }
 
-.element-drop {
-  -moz-box-shadow: 0px 0px $topic-drag-shadow-spread $topic-drag-shadow-blur $topic-drag-shadow-color;
-  -webkit-box-shadow: 0px 0px $topic-drag-shadow-spread $topic-drag-shadow-blur $topic-drag-shadow-color;
-  -o-box-shadow: 0px 0px $topic-drag-shadow-spread $topic-drag-shadow-blur $topic-drag-shadow-color;
-  box-shadow: 0px 0px $topic-drag-shadow-spread $topic-drag-shadow-blur $topic-drag-shadow-color;
-  filter:progid:DXImageTransform.Microsoft.Shadow(color=$topic-drag-shadow-color, Direction=NaN, Strength=12);
+.element-drop-success {
+  @include element-drop(green);
+}
+
+.element-drop-failure {
+  @include element-drop(red);
 }
 
 ul.list-topic {
   li {
-    @include border-bottom-light();
     margin: 5px 0 5px 0;
     padding: 10px;
 
@@ -103,197 +91,3 @@ ul.list-topic {
 .label-category-2 {
   @include label-variant(purple);
 }
-
-// ul.list-light {
-//   li {
-//     background-clip: content-box;
-//     p {
-//       padding: 5px 10px 5px 10px;
-//     }
-//   }
-//   li:nth-child(even) {
-//     background-color: $list-light-even-background-color;
-//   }
-//   li:nth-child(odd) {
-//     background-color: $list-light-odd-background-color;
-//   }
-// }
-
-// header {
-//   background-color: $black;
-//   color: $white;
-//   padding-left: 20px;
-//   padding-right: 20px;
-//   a {
-//     color: $white;
-//     display: inline-block;
-//     font-family: $headings-font-family;
-//     margin-bottom: 10px;
-//     padding-bottom: 20px;
-//     padding-left: 20px;
-//     padding-right: 20px;
-//     padding-top: 20px;
-//     text-transform: uppercase;
-//     &:hover {
-//       background-color: $ippon-complementary;
-//       color: $black;
-//       text-decoration: none;
-//     }
-//   }
-//   nav {
-//     margin-bottom: 0;
-//     @media screen and (min-width: $screen-xs) {
-//       margin-bottom: 40px;
-//     }
-//   }
-//   nav.home .home,
-//   nav.events .events,
-//   nav.speakers .speakers,
-//   nav.contact .contact,
-//   nav.members .members {
-//     background-color: $ippon-complementary;
-//   }
-// }
-
-// footer {
-//   background-color: $black;
-//   color: $white;
-//   margin-top: 40px;
-//   padding: 40px 20px 20px 20px;
-
-//   a {
-//     color: $white;
-//     display: inline-block;
-//     font-family: $headings-font-family;
-//     padding-bottom: 20px;
-//     padding-left: 20px;
-//     padding-right: 20px;
-//     padding-top: 30px;
-//     text-transform: uppercase;
-//     @media screen and (min-width: $screen-sm) {
-//       padding: 0;
-//     }
-//   }
-// }
-
-// .bg-primary {
-//   background-color: $ippon-primary;
-// }
-// .bg-secondary {
-//   background-color:$ippon-secondary;
-// }
-// .bg-gray-lightest {
-//   background-color: $gray-lightest;
-// }
-
-// .label-form-error {
-//   color: $ippon-primary;
-// }
-
-// .text-primary {
-//   color: $ippon-primary;
-// }
-// .text-secondary {
-//   color: $ippon-secondary !important;
-// }
-
-// .next-events,
-// .all-events {
-//   $events-main-color: $ippon-secondary;
-//   margin-bottom: 40px;
-//   event, .event {
-//     @include event-horizontal-gap();
-//     padding-top: 20px;
-//     margin-top: 20px;
-//     @media screen and (min-width: $screen-sm) {
-//       @include event-no-gap();
-//     }
-//   }
-//   ul {
-//     li {
-//       @include event-horizontal-gap();
-//       padding-top: 30px;
-//       background-color: $list-light-even-background-color;
-//       p {
-//         padding: 5px 10px 5px 10px;
-//       }
-//     }
-//     li:last-child {
-//       border-bottom: 0;
-//     }
-//     // li:hover {
-//     //   background-color: $ippon-secondary-lighter;
-//     //   cursor: pointer;
-//     // }
-//   }
-// }
-
-// .next-events {
-//   ul {
-//     li {
-//       @media screen and (min-width: $screen-sm) {
-//         @include event-vertical-gap();
-//       }
-//     }
-//     li:last-child {
-//       border-bottom: 0;
-//       @media screen and (min-width: $screen-sm) {
-//         border-right: 0;
-//       }
-//     }
-//   }
-// }
-
-// .all-events {
-//   ul {
-//     li {
-//       @media screen and (min-width: $screen-sm) {
-//         padding-bottom: 10px;
-//         padding-top: 20px;
-//       }
-//     }
-//   }
-// }
-
-// event, .event {
-//   background: $white;
-// }
-
-// event, .event,
-// event-mini, .event-mini,
-// list-event, .list-event {
-//   .main {
-//     background: $white;
-//     // background-clip: content-box;
-//     p {
-//       padding: 5px 10px 5px 10px;
-//     }
-//   }
-//   .action {
-//     text-align: right;
-//   }
-//   .btn {
-//     margin: 10px;
-//   }
-//   .date {
-//     background: $ippon-secondary;
-//     color: $black;
-//     font-weight: bold;
-//   }
-//   .teasing {
-//   }
-//   .title {
-//     padding: 5px 10px 5px 10px;
-//   }
-// }
-// .partners {
-//   ul {
-//     li {
-//       padding: 30px;
-//     }
-//   }  
-//   h1, h2, h3, h4, h5, h6 {
-//       background-color: $ippon-primary;
-//       color: $white;
-//   }
-// }

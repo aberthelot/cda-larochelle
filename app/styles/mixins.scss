@@ -1,26 +1,30 @@
+
+
+@import "variables.scss";
+
 ////////////////////////////////////////////////////////////////////////
 // Définitions des mixins (cf. https://github.com/jlong/sass-bootstrap)
 ////////////////////////////////////////////////////////////////////////
 
-@import "variables.scss";
-
-@mixin margin($margin) {
-  margin: $margin;
+@mixin element-drop($shadow-color) {
+  -moz-box-shadow: 0px 0px $topic-drag-shadow-spread $topic-drag-shadow-blur $shadow-color;
+  -webkit-box-shadow: 0px 0px $topic-drag-shadow-spread $topic-drag-shadow-blur $shadow-color;
+  -o-box-shadow: 0px 0px $topic-drag-shadow-spread $topic-drag-shadow-blur $shadow-color;
+  box-shadow: 0px 0px $topic-drag-shadow-spread $topic-drag-shadow-blur $shadow-color;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=$shadow-color, Direction=NaN, Strength=12);
 }
 
-@mixin border-bottom-dark() {
-  border-bottom: 10px solid rgba(255, 255, 255, $opacity-medium);
-  // box-sizing: border-box;
+@mixin element-drag($shadow-color) {
+  -moz-box-shadow: inset 0px 0px $topic-drag-shadow-spread $topic-drag-shadow-blur $shadow-color;
+  -webkit-box-shadow: inset 0px 0px $topic-drag-shadow-spread $topic-drag-shadow-blur $shadow-color;
+  -o-box-shadow: inset 0px 0px $topic-drag-shadow-spread $topic-drag-shadow-blur $shadow-color;
+  box-shadow: inset 0px 0px $topic-drag-shadow-spread $topic-drag-shadow-blur $shadow-color;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=$shadow-color, Direction=NaN, Strength=12);
 }
 
-@mixin border-right-dark() {
-  border-right: 1px solid rgba(255, 255, 255, $opacity-medium);
-  box-sizing: border-box;
-}
-
-@mixin border-bottom-light() {
-  border-bottom: 1px solid rgba(0, 0, 0, .1);
-}
+////////////////////////////////////////////////////////////////////////
+// Définitions des mixins (cf. https://github.com/jlong/sass-bootstrap)
+////////////////////////////////////////////////////////////////////////
 
 // GRADIENTS
 // --------------------------------------------------
