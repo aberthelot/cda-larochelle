@@ -49,10 +49,10 @@ body {
 // }
 
 .month {
-    > article:nth-child(even) {
+    > section:nth-child(even) {
       background-color: $day-background-even;
     }
-    > article:nth-child(odd) {
+    > section:nth-child(odd) {
       background-color: $day-background-odd;
     }
 }
@@ -60,9 +60,12 @@ body {
 .day {
   background-color: $day-background;
   // background-color: green;
-  height: 80px;
+  height: 200px;
   width: 12%;
   float: left;
+  time {
+    color: purple;
+  }
 }
 
 .element-drag {

@@ -2,6 +2,37 @@
 
 var draganddropUI = angular.module('draganddropUI', []);
 
+
+
+// eventUI.directive('minitopic', function() {
+//   return {
+//     restrict: 'E',
+//     replace: true,
+//     template:
+
+//       '<article'
+//       + ' data-category-id="' + category_id +'">'
+//         + '<p>'
+//           + '<span class="label label-category-'
+//           + category_id +'">'
+//             + category_title
+//           + '</span>'
+//         + '</p>'
+//         + '<p>' + title + '</p>'
+//       // evt.target.innerHTML += '<p> <button>test</button>';
+//         + '</article>';
+
+
+//     '<div class="tile">' +
+//     '<h3>{{event.title}}</h3>' +
+//     '<img src="{{event.picture}}" alt="{{event.title}}">' +
+//     '<p>{{event.teasing}}</p>' +
+//     '<a class="btn btn-primary btn-large" href="http://designmodo.com/flat">' +
+//     '<i class="icon-chevron-right icon-white"></i><i class="icon-chevron-right icon-white"></i> Inscription</a>' +
+//     '</div>'
+//   }
+// });
+
 draganddropUI.directive('drag', ["$rootScope", function($rootScope) {
 
   function dragStart(evt, element, dragStyle) {
@@ -145,6 +176,7 @@ function checkAvailableCategory(droppableElement, category_id) {
       // console.log(droppedArticles[i].getAttribute('data-category-id') + ' =?= ' + category_id);
       if (droppedArticles[i].getAttribute('data-category-id') == category_id) {
         check = false;
+        console.log('SOUCI');
       }
     };
 

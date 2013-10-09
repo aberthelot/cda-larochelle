@@ -30,69 +30,14 @@
 
    <section class="col-sm-8">
       <h1>{{now | date:'MMMM yy'}}</h1>
-      <!-- <h1>{{now}}</h1> -->
       <section class="month">
-      <article class="day" drop ng-repeat="day in daysMonth">
-        <!-- <time datetime="2012-12-09">{{day}}<time> -->
-        <time datetime="{{day | date:'yyyy-MM-dd'}}">{{day | date:'dd'}}<time>
-      </article>
+        <section class="day" drop dropStyle="element-drop" ng-repeat="day in daysMonth">
+          <time datetime="{{day | date:'yyyy-MM-dd'}}">{{day | date:'dd'}}</time>
+          <article ng-repeat="topic in topics | scheduled">
+            {{topic.title}}
+          </article>
+        </section>
       </section>
-      <!-- <table class="table table-calendar"> -->
-<!--         <thead>
-          <tr>
-            <th># Semaine</th>
-            <th>lundi</th>
-            <th>mardi</th>
-            <th>mercredi</th>
-            <th>jeudi</th>
-            <th>vendredi</th>
-            <th>samedi</th>
-            <th>dimanche</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="week">
-            <td><div data-date="01-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">01<time></div></td>
-            <td><div data-date="02-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-02">02<time></div></td>
-            <td><div data-date="03-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-03">03<time></div></td>
-            <td><div data-date="04-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-04">04<time></div></td>
-            <td><div data-date="05-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-05">05<time></div></td>
-            <td><div data-date="06-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-06">06<time></div></td>
-            <td><div data-date="07-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-07">07<time></div></td>
-            <td><div data-date="08-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-08">08<time></div></td>
-          </tr>
-          <tr class="week">
-            <td><div data-date="09-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-09">09<time></div></td>
-            <td><div data-date="10-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">10<time></div></td>
-            <td><div data-date="11-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">11<time></div></td>
-            <td><div data-date="12-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">12<time></div></td>
-            <td><div data-date="13-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">13<time></div></td>
-            <td><div data-date="14-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">14<time></div></td>
-            <td><div data-date="15-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">15<time></div></td>
-            <td><div data-date="16-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">16<time></div></td>
-          </tr>
-          <tr class="week">
-            <td><div data-date="17-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">17<time></div></td>
-            <td><div data-date="18-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">18<time></div></td>
-            <td><div data-date="19-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">01<time></div></td>
-            <td><div data-date="20-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">01<time></div></td>
-            <td><div data-date="21-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">01<time></div></td>
-            <td><div data-date="22-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">01<time></div></td>
-            <td><div data-date="23-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">01<time></div></td>
-            <td><div data-date="24-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">01<time></div></td>
-          </tr>
-          <tr class="week">
-            <td><div data-date="26-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">01<time></div></td>
-            <td><div data-date="27-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">01<time></div></td>
-            <td><div data-date="28-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">01<time></div></td>
-            <td><div data-date="29-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">01<time></div></td>
-            <td><div data-date="30-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">01<time></div></td>
-            <td><div data-date="31-12-2012" class="day" drop="topic" dropStyle="element-drop"><time datetime="2012-12-01">01<time></div></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table> -->
     </section>
 
 
