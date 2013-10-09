@@ -33,7 +33,7 @@
       <section class="month">
         <section class="day" drop dropStyle="element-drop" ng-repeat="day in daysMonth">
           <time datetime="{{day | date:'yyyy-MM-dd'}}">{{day | date:'dd'}}</time>
-          <article ng-repeat="topic in topics | scheduled">
+          <article ng-repeat="topic in topics | scheduled:(day)">
             {{topic.title}}
           </article>
         </section>
