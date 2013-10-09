@@ -48,12 +48,21 @@ body {
 //   }
 // }
 
+.month {
+    > article:nth-child(even) {
+      background-color: $day-background-even;
+    }
+    > article:nth-child(odd) {
+      background-color: $day-background-odd;
+    }
+}
+
 .day {
   background-color: $day-background;
   // background-color: green;
   height: 80px;
-  width: 80px;
-
+  width: 12%;
+  float: left;
 }
 
 .element-drag {

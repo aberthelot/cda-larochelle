@@ -19,6 +19,9 @@ $success: LimeGreen;
 
 
 $day-background: whiteSmoke;
+$day-background-odd: $day-background;
+$day-background-even: lighten($day-background, 10%);
+
 $week-background: Linen;
 $week-background-odd: $week-background;
 $week-background-even: lighten($week-background, 10%);

@@ -4,8 +4,6 @@ var draganddropUI = angular.module('draganddropUI', []);
 
 draganddropUI.directive('drag', ["$rootScope", function($rootScope) {
 
-var cracra;
-
   function dragStart(evt, element, dragStyle) {
     element.addClass(dragStyle);
     /**
@@ -15,7 +13,7 @@ var cracra;
     evt.originalEvent.dataTransfer.setData('data-title', evt.target.getAttribute('data-title'));
     evt.originalEvent.dataTransfer.setData('data-category-id', evt.target.getAttribute('data-category-id'));
     evt.originalEvent.dataTransfer.setData('data-category-title', evt.target.getAttribute('data-category-title'));
-    evt.originalEvent.dataTransfer.setData('data-dateBegin', evt.target.getAttribute('data-dateBegin'));
+    evt.originalEvent.dataTransfer.setData('data-dateFirst', evt.target.getAttribute('data-dateFirst'));
     // evt.dataTransfer.effectAllowed = 'move';
 
     // on mémorise l'identifiant de la catégorie pour les actions autres que drop
@@ -41,7 +39,6 @@ var cracra;
       });
     }
   };
-
 
 }]);
 
@@ -78,12 +75,11 @@ draganddropUI.directive('drop', function() {
 
     var droppableElement = getDroppableElement(evt);
 
-
-    // alert('DIV ::' + droppableElement.innerHTML);
-
     if (checkAvailableCategory(droppableElement, category_id)) {
       // evt.target.innerHTML += '<p>' + evt.originalEvent.dataTransfer.getData('data-id') + '</p>';
       droppableElement.innerHTML += '<article'
+      // + ' draggable="true"'
+      // + ' drag'
       + ' data-category-id="' + category_id +'">'
         + '<p>'
           + '<span class="label label-category-'
