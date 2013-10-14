@@ -4,19 +4,36 @@ angular.module('cdaLarochelleApp')
   .filter('scheduled', function () {
     return function (items, day) {
 
-      // console.log('TEST :: ' + day);
+      // console.log('TEST DAY :: ' + moment(day).format('L'));
+      
+
+
 
       var arrayToReturn = [];
 
         for (var i=0; i<items.length; i++){
-            // if (items[i].title == 'Test B') {
-            // console.log('TEST :: ' + items[i].scheduledBegin.);
 
-            // if (moment(items[i].scheduledBegin).isAfter('2013-10-08')
-            //   && moment(items[i].scheduledEnd).isBefore('2013-10-20')) {
+          var scheduledBegin = moment(items[i].scheduledBegin);
+          var scheduledEnd = moment(items[i].scheduledEnd);
 
-            if (moment(day).isAfter(items[i].scheduledBegin)
-              && moment(day).isBefore(items[i].scheduledEnd)) {
+// console.log('TEST ITEM :: ' + scheduledBegin.format('L'));
+
+            // console.log(moment(day).format('L')
+            //   + ' AFTER ' + scheduledBegin.format('L')
+            //   + ' :: ' + moment(day).isAfter(scheduledBegin.startOf('day')));
+
+            // console.log(moment(day).format('L')
+            //   + ' SAME ' + scheduledBegin.format('L')
+            //   + ' :: ' + moment(day).isSame(scheduledBegin.startOf('day'), 'day'));
+
+            // console.log(moment(day).format('L')
+            //   + ' BEFORE ' + scheduledBegin.format('L')
+            //   + ' :: ' + moment(day).isBefore(scheduledBegin.startOf('day')));
+
+            // console.log('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_');
+
+            if ((moment(day).isAfter(items[i].scheduledBegin) || moment(day).isSame(scheduledBegin.startOf('day'), 'day'))
+              && (moment(day).isBefore(items[i].scheduledEnd)) || moment(day).isSame(scheduledEnd.startOf('day'), 'day')) {
                 arrayToReturn.push(items[i]);
             }
         }
