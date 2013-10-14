@@ -38,7 +38,7 @@ angular.module('cdaLarochelleApp')
               $scope.topics[i].scheduledBegin = day;
             }
           }
-          
+        $scope.topics[i].isScheduledEnd = true;
         }
       };
 

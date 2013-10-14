@@ -93,7 +93,13 @@ ul.list-topic {
   li:nth-child(odd) {
     background-color: $list-light-odd-background-color;
     border-left: $list-light-border-size solid $list-light-odd-border-color;
-  } 
+  }
+
+  p.scheduling {
+    width: 50%;
+    float: left;
+    padding: 0 4px 0 4px;
+  }
 }
 
 .label-category-1 {
