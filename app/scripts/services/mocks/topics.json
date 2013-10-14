@@ -1,39 +1,42 @@
 [
   {
-    "title" : "Test A",
-    "author" : "Alvin Berthelot",
-    "created" : "2012-12-17T22:14:37 -01:00",
-    "isScheduled" : true,
-    "scheduledBegin" : "2012-02-04T22:44:30.652",
-    "scheduledEnd" : "2012-02-04T22:44:30.652",
-    "text" : "A la une aujourd'hui",
-    "category" : 
-    {
-        "id" : 2,
-        "title" : "Services"
-    }
-  },
-  {
-    "title" : "Test B",
-    "author" : "Alvin Berthelot",
-    "created" : "2012-12-17T22:14:37 -01:00",
-    "isScheduled" : false,
-    "scheduledBegin" : "2012-02-04T22:44:30.652",
-    "scheduledEnd" : "2012-02-04T22:44:30.652",
-    "text" : "A la une aujourd'hui",
-    "category" : 
-    {
-        "id" : 1,
-        "title" : "Vie de l'agent"
-    }
-  },
-  {
-    "title" : "Test C",
-    "author" : "Alvin Berthelot",
+    "id" : "10984",
+    "title" : "Concertation:Aménagement du Parc Technologique bas carbone",
+    "author" : "Ronceray Elise",
     "created" : "2012-12-17T22:14:37 -01:00",
     "isScheduled" : true,
     "scheduledBegin" : "2013-10-03T22:44:30.652",
-    "scheduledEnd" : "2013-10-18T22:44:30.652",
+    "scheduledEnd" : "2013-10-15T22:44:30.652",
+    "text" : "A la une aujourd'hui",
+    "category" : 
+    {
+        "id" : 2,
+        "title" : "Service"
+    }
+  },
+  {
+    "id" : "10965",
+    "title" : "La construction du 1er bâtiment énergie positive par la CdA",
+    "author" : "Ronceray Elise",
+    "created" : "2012-12-17T22:14:37 -01:00",
+    "isScheduled" : false,
+    "scheduledBegin" : "",
+    "scheduledEnd" : "",
+    "text" : "A la une aujourd'hui",
+    "category" : 
+    {
+        "id" : 2,
+        "title" : "Service"
+    }
+  },
+  {
+    "id" : "10974",
+    "title" : "Mouvements des effectifs d'octobre 2013",
+    "author" : "Ronceray Elise",
+    "created" : "2012-12-17T22:14:37 -01:00",
+    "isScheduled" : false,
+    "scheduledBegin" : "",
+    "scheduledEnd" : "",
     "text" : "A la une aujourd'hui",
     "category" : 
     {
@@ -42,45 +45,18 @@
     }
   },
   {
-    "title" : "Test D",
-    "author" : "Alvin Berthelot",
-    "created" : "2012-12-17T22:14:37 -01:00",
-    "isScheduled" : true,
-    "scheduledBegin" : "2013-10-08T22:44:30.652",
-    "scheduledEnd" : "2013-10-23T22:44:30.652",
-    "text" : "A la une aujourd'hui",
-    "category" : 
-    {
-        "id" : 2,
-        "title" : "Services"
-    }
-  },
-  {
-    "title" : "Test E",
-    "author" : "Alvin Berthelot",
+    "id" : "10931",
+    "title" : "Point statutaire",
+    "author" : "Ronceray Elise",
     "created" : "2012-12-17T22:14:37 -01:00",
     "isScheduled" : false,
-    "scheduledBegin" : "2009-02-04T22:44:30.652",
-    "scheduledEnd" : "2012-02-04T22:44:30.652",
+    "scheduledBegin" : "",
+    "scheduledEnd" : "",
     "text" : "A la une aujourd'hui",
     "category" : 
     {
-        "id" : 2,
-        "title" : "Services"
-    }
-  },
-  {
-    "title" : "Test F",
-    "author" : "Alvin Berthelot",
-    "created" : "2012-12-17T22:14:37 -01:00",
-    "isScheduled" : true,
-    "scheduledBegin" : "2012-02-04T22:44:30.652",
-    "scheduledEnd" : "2012-02-04T22:44:30.652",
-    "text" : "A la une aujourd'hui",
-    "category" : 
-    {
-        "id" : 2,
-        "title" : "Services"
+        "id" : 1,
+        "title" : "Vie de l'agent"
     }
   }
 ]

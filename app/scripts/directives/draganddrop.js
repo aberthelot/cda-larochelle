@@ -40,11 +40,16 @@ draganddropUI.directive('drag', ["$rootScope", function($rootScope) {
     /**
     on ne peut pas utiliser directement evt.dataTransfer à cause jQuery ...
     **/
-    evt.originalEvent.dataTransfer.setData('data-id', evt.target.getAttribute('data-id'));
-    evt.originalEvent.dataTransfer.setData('data-title', evt.target.getAttribute('data-title'));
-    evt.originalEvent.dataTransfer.setData('data-category-id', evt.target.getAttribute('data-category-id'));
-    evt.originalEvent.dataTransfer.setData('data-category-title', evt.target.getAttribute('data-category-title'));
-    evt.originalEvent.dataTransfer.setData('data-dateFirst', evt.target.getAttribute('data-dateFirst'));
+    // informations propres à l'actualité
+    evt.originalEvent.dataTransfer.setData('data-id', evt.target.parentNode.getAttribute('data-id'));
+    evt.originalEvent.dataTransfer.setData('data-title', evt.target.parentNode.getAttribute('data-title'));
+    evt.originalEvent.dataTransfer.setData('data-category-id', evt.target.parentNode.getAttribute('data-category-id'));
+    evt.originalEvent.dataTransfer.setData('data-category-title', evt.target.parentNode.getAttribute('data-category-title'));
+    // informations propres à la date
+    evt.originalEvent.dataTransfer.setData('data-scheduled', evt.target.getAttribute('data-scheduled'));    
+
+
+    // evt.originalEvent.dataTransfer.setData('data-dateFirst', evt.target.getAttribute('data-dateFirst'));
     // evt.dataTransfer.effectAllowed = 'move';
 
     // on mémorise l'identifiant de la catégorie pour les actions autres que drop
@@ -73,7 +78,7 @@ draganddropUI.directive('drag', ["$rootScope", function($rootScope) {
 
 }]);
 
-draganddropUI.directive('drop', function() {
+draganddropUI.directive('drop', function($rootScope) {
 
   function dragEnter(evt, element, dropStyle) {
     // evt.preventDefault();
@@ -100,34 +105,54 @@ draganddropUI.directive('drop', function() {
     // evt.preventDefault();
 
     //
+    var id = evt.originalEvent.dataTransfer.getData('data-id');
     var title = evt.originalEvent.dataTransfer.getData('data-title');
     var category_id = evt.originalEvent.dataTransfer.getData('data-category-id');
     var category_title = evt.originalEvent.dataTransfer.getData('data-category-title');
+    //
+    var scheduled = evt.originalEvent.dataTransfer.getData('data-scheduled');
 
     var droppableElement = getDroppableElement(evt);
 
-    if (checkAvailableCategory(droppableElement, category_id)) {
-      // evt.target.innerHTML += '<p>' + evt.originalEvent.dataTransfer.getData('data-id') + '</p>';
-      droppableElement.innerHTML += '<article'
-      // + ' draggable="true"'
-      // + ' drag'
-      + ' data-category-id="' + category_id +'">'
-        + '<p>'
-          + '<span class="label label-category-'
-          + category_id +'">'
-            + category_title
-          + '</span>'
-        + '</p>'
-        + '<p>' + title + '</p>'
-      // evt.target.innerHTML += '<p> <button>test</button>';
-        + '</article>';
-    }
+
 
     // element.removeClass(dropStyle);
     element.removeClass(dropStyle + '-success');
     element.removeClass(dropStyle + '-failure');
 
     localStorage.removeItem('category_id_dragged');
+
+
+
+    if (checkAvailableCategory(droppableElement, id, category_id)) {
+      // // evt.target.innerHTML += '<p>' + evt.originalEvent.dataTransfer.getData('data-id') + '</p>';
+      // droppableElement.innerHTML += '<article'
+      // // + ' draggable="true"'
+      // // + ' drag'
+      // + ' data-category-id="' + category_id +'">'
+      //   + '<p>'
+      //     + '<span class="label label-category-'
+      //     + category_id +'">'
+      //       + category_title
+      //     + '</span>'
+      //   + '</p>'
+      //   + '<p>' + title + '</p>'
+      // // evt.target.innerHTML += '<p> <button>test</button>';
+      //   + '</article>';
+
+    // on récupère la date
+    var dropDay = droppableElement.querySelectorAll('time')[0].getAttribute('datetime');
+    // 
+    $rootScope.$broadcast('dropEvent', id, dropDay, scheduled);
+    }
+
+
+
+
+
+
+
+
   };
   
   return {
@@ -135,6 +160,13 @@ draganddropUI.directive('drop', function() {
     link: function(scope, element, attrs)  {
       scope.dropData = scope[attrs["drop"]];
       scope.dropStyle = attrs["dropstyle"];
+
+
+
+//       scope.dropDay = attrs["dropday"];
+// console.log('uyuy 2 :: ' + scope.dropDay);
+
+
       element.bind('dragenter', function(evt) {
         dragEnter(evt, element, scope.dropStyle);
       });
@@ -143,8 +175,10 @@ draganddropUI.directive('drop', function() {
       });
       element.bind('dragover', dragOver);
       element.bind('drop', function(evt) {
+        //
         drop(evt, element, scope.dropStyle);
-        // $rootScope.$broadcast('dropEvent', $rootScope.draggedElement, scope.dropData);
+        //
+        // broadcastData(evt);
       });
     }
   }
@@ -162,7 +196,7 @@ function getDroppableElement(evt) {
   return droppableElement;
 }
 
-function checkAvailableCategory(droppableElement, category_id) {
+function checkAvailableCategory(droppableElement, id, category_id) {
 
     var check = true;
 
@@ -174,9 +208,10 @@ function checkAvailableCategory(droppableElement, category_id) {
     for (var i = 0; i < droppedArticles.length; i++) {
       // alert('TEST :: ' + droppedArticles[i].innerHTML);
       // console.log(droppedArticles[i].getAttribute('data-category-id') + ' =?= ' + category_id);
-      if (droppedArticles[i].getAttribute('data-category-id') == category_id) {
+      if (droppedArticles[i].getAttribute('data-category-id') == category_id
+        && droppedArticles[i].getAttribute('data-id') !== id) {
         check = false;
-        console.log('SOUCI');
+        // console.log('SOUCI');
       }
     };
 

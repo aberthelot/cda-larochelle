@@ -28,9 +28,18 @@ angular.module('cdaLarochelleApp')
 
             // console.log(moment(day).format('L')
             //   + ' BEFORE ' + scheduledBegin.format('L')
-            //   + ' :: ' + moment(day).isBefore(scheduledBegin.startOf('day')));
+            //   + ' :: ' + moment(day).isBefore(scheduledEnd.startOf('day')));
 
             // console.log('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_');
+
+            // if () {
+
+            // } else if () {
+
+            // } else if () {
+
+            // }
+
 
             if ((moment(day).isAfter(items[i].scheduledBegin) || moment(day).isSame(scheduledBegin.startOf('day'), 'day'))
               && (moment(day).isBefore(items[i].scheduledEnd)) || moment(day).isSame(scheduledEnd.startOf('day'), 'day')) {
