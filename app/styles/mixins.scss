@@ -2,6 +2,33 @@
 
 @import "variables.scss";
 
+
+// CUSTOMS
+// --------------------------------------------------
+
+// Category
+// -------------------------
+@mixin category-variant($color) {
+  background-color: whiteSmoke;
+  // background-color: lighten($color, 74%);
+  // li {
+  //   border: 2px solid $color;
+  // }
+
+  .label {
+    background-color: $color;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 ////////////////////////////////////////////////////////////////////////
 // Définitions des mixins (cf. https://github.com/jlong/sass-bootstrap)
 ////////////////////////////////////////////////////////////////////////

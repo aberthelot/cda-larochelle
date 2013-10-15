@@ -17,11 +17,11 @@
       </div>
       <ul class="list-unstyled list-topic">
 <!--         <li ng-repeat="topic in topics | filter : search | filter : '!'+topic.isScheduled" data-id="{{topic.id}}" data-title="{{topic.title}}" data-category-title="{{topic.category.title}}" data-category-id="{{topic.category.id}}"> -->
-        <li ng-repeat="topic in topics | filter : search" data-id="{{topic.id}}" data-title="{{topic.title}}" data-category-title="{{topic.category.title}}" data-category-id="{{topic.category.id}}">
+        <li class="category-{{topic.category.id}}" ng-repeat="topic in topics | filter : search" data-id="{{topic.id}}" data-title="{{topic.title}}" data-category-title="{{topic.category.title}}" data-category-id="{{topic.category.id}}">
           <p>
-            <i ng-show="topic.isScheduled" class="icon-calendar success"></i>
-            <i ng-show="!topic.isScheduled" class="icon-calendar-empty danger"></i>
-            <span class="label label-category-{{topic.category.id}}">{{topic.category.title}}</span>
+<!--             <i ng-show="topic.isScheduled" class="icon-calendar success"></i>
+            <i ng-show="!topic.isScheduled" class="icon-calendar-empty danger"></i> -->
+            <span class="label">{{topic.category.title}}</span>
           </p>
           <p>{{topic.title}}</p>
             <p drag dragStyle="element-drag" data-scheduled="begin" class="scheduling">
@@ -34,7 +34,7 @@
                 </span>
                 <span ng-show="!topic.isScheduled">
                   <i class="icon-calendar-empty danger"></i>
-                  a faire
+                  Non planifiée
                 </span>
               </span>
             </p>
@@ -48,12 +48,12 @@
                 </span>
                 <span ng-show="!topic.isScheduled">
                   <i class="icon-calendar-empty danger"></i>
-                  a faire
+                  Non planifiée
                 </span>
               </span>
             </p>
           </p>
-          <p>{{topic.author}}</p>
+          <p><i class="icon-user"></i> {{topic.author}}</p>
         </li>
       <ul>
     </section>
@@ -62,10 +62,10 @@
       <section class="month">
         <section class="day" dropDay="{{day | date:'yyyy-MM-dd'}}" drop dropStyle="element-drop" ng-repeat="day in daysMonth">
           <time datetime="{{day | date:'yyyy-MM-dd'}}">{{day | date:'dd'}}</time>
-          <article ng-repeat="topic in topics | scheduled:(day)"
+          <article class="category-{{topic.category.id}}" ng-repeat="topic in topics | scheduled:(day)"
             data-id="{{topic.id}}" data-category-id="{{topic.category.id}}">
             <p>
-              <span class="label label-category-{{topic.category.id}}">
+              <span class="label">
                 {{topic.category.title}}
               </span>
             </p>

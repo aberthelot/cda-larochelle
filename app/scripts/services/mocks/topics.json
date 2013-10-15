@@ -3,10 +3,13 @@
     "id" : "10984",
     "title" : "Concertation:Aménagement du Parc Technologique bas carbone",
     "author" : "Ronceray Elise",
+    "valid" : true,
     "created" : "2012-12-17T22:14:37 -01:00",
-    "isScheduled" : true,
-    "scheduledBegin" : "2013-10-03T22:44:30.652",
-    "scheduledEnd" : "2013-10-15T22:44:30.652",
+    "isScheduled" : false,
+    "publishBegin" : "2013-10-03T22:44:30.652",
+    "publishEnd" : "2013-10-15T22:44:30.652",
+    "scheduledBegin" : "",
+    "scheduledEnd" : "",
     "text" : "A la une aujourd'hui",
     "category" : 
     {
@@ -18,8 +21,11 @@
     "id" : "10965",
     "title" : "La construction du 1er bâtiment énergie positive par la CdA",
     "author" : "Ronceray Elise",
+    "valid" : true,
     "created" : "2012-12-17T22:14:37 -01:00",
     "isScheduled" : false,
+    "publishBegin" : "2013-09-05T22:44:30.652",
+    "publishEnd" : "2014-12-05T22:44:30.652",
     "scheduledBegin" : "",
     "scheduledEnd" : "",
     "text" : "A la une aujourd'hui",
@@ -33,8 +39,11 @@
     "id" : "10974",
     "title" : "Mouvements des effectifs d'octobre 2013",
     "author" : "Ronceray Elise",
+    "valid" : true,
     "created" : "2012-12-17T22:14:37 -01:00",
     "isScheduled" : false,
+    "publishBegin" : "2013-23-09T22:44:30.652",
+    "publishEnd" : "2013-10-30T22:44:30.652",
     "scheduledBegin" : "",
     "scheduledEnd" : "",
     "text" : "A la une aujourd'hui",
@@ -48,8 +57,11 @@
     "id" : "10931",
     "title" : "Point statutaire",
     "author" : "Ronceray Elise",
+    "valid" : true,
     "created" : "2012-12-17T22:14:37 -01:00",
     "isScheduled" : false,
+    "publishBegin" : "2013-07-04T22:44:30.652",
+    "publishEnd" : "2013-12-31T22:44:30.652",
     "scheduledBegin" : "",
     "scheduledEnd" : "",
     "text" : "A la une aujourd'hui",
@@ -60,5 +72,3 @@
     }
   }
 ]
-
-
