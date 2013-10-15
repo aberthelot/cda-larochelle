@@ -5,10 +5,10 @@ http://www.json-generator.com/
     {
         id: '{{index}}',
         title: '{{lorem(10,words)}}',
-        created: '{{date(YYYY-MM-ddThh:mm:ss Z)}}',
+        created: '{{date(YYYY-MM-ddThh:mm:ss)}}',
         relevance: '{{numeric(0,100)}}',
         source: function(idx) {
-            var choices = ['Email', 'Contact', 'Meet', 'Todo', 'Layout', 'Article', 'Topic', 'Application', 'Rss', 'Library', 'Directory'];
+            var choices = ['email', 'contact', 'meet', 'todo', 'layout', 'article', 'topic', 'application', 'rss', 'library', 'directory'];
             return choices[this.numeric(0, choices.length - 1)];
         }
     }

@@ -9,31 +9,62 @@ angular.module('cdaLarochelleApp')
   $scope.group = 'global';
   $scope.sort = 'relevance';
 
-  // $scope.sources = [
-  //   {
-  //     "name" : "email",
-  //     "selected" : true
-  //   },
-  //   {
-  //     "name" : "contact",
-  //     "selected" : true
-  //   },
-  // ];  
-
-
-  $scope.sources = {
-    email: true,
-    contact:true,
-    meet:true,
-    todo:true,
-    layout:true,
-    article:true,
-    topic:true,
-    application:true,
-    rss:true,
-    library:true,
-    directory:true
-  };
-
+  $scope.sources = [
+    {
+      "name" : "email",
+      "selected" : true,
+      "icon" : "icon-envelope"
+    },
+    {
+      "name" : "contact",
+      "selected" : true,
+      "icon" : "icon-user"
+    },
+    {
+      "name" : "meet",
+      "selected" : true,
+      "icon" : "icon-calendar"
+    },
+    {
+      "name" : "todo",
+      "selected" : true,
+      "icon" : "icon-edit"
+    },
+        {
+      "name" : "layout",
+      "selected" : true,
+      "icon" : "icon-columns"
+    },
+    {
+      "name" : "article",
+      "selected" : true,
+      "icon" : "icon-align-left"
+    },
+    {
+      "name" : "topic",
+      "selected" : true,
+      "icon" : "icon-file-text-alt"
+    },
+    {
+      "name" : "application",
+      "selected" : true,
+      "icon" : "icon-dashboard"
+    },
+    {
+      "name" : "rss",
+      "selected" : true,
+      "icon" : "icon-rss"
+    },
+    {
+      "name" : "library",
+      "selected" : true,
+      "icon" : "icon-folder-open-alt"
+    },
+    {
+      "name" : "directory",
+      "selected" : true,
+      "icon" : "icon-group"
+    }
+  ];
 
 });
