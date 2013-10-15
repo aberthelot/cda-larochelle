@@ -1,1 +1,142 @@
-<p>This is the search-engine view.</p>
+
+<section class="">
+  <div class="row">
+    <section class="col-sm-4">
+      <div class="well well-complementary">
+        <!-- formulaire de recherche -->
+        <form name="searchForm" class="form-horizontal">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" ng-model="sources.email">
+                Emails
+              </input>
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" ng-model="sources.contact">
+                Contacts
+              </input>
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" ng-model="sources.meet">
+                Rendez-vous
+              </input>
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" ng-model="sources.todo">
+                Tâches
+              </input>
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" ng-model="sources.layout">
+                Pages (layouts)
+              </input>
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" ng-model="sources.article">
+                Articles
+              </input>
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" ng-model="sources.topic">
+                Actualités
+              </input>
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" ng-model="sources.application">
+                Les applications
+              </input>
+            </label>
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" ng-model="sources.rss">
+                Flux RSS
+              </input>
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" ng-model="sources.library">
+                GED
+              </input>
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" ng-model="sources.directory">
+                Annuaire
+              </input>
+            </label>
+          </div>
+
+        </form>
+      </div>
+    </section>
+    <section class="col-sm-8">
+
+      <div class="row">
+        <div class="col-sm-6">
+          <form name="displayForm" class="form-horizontal">
+            Affichage
+            <div class="radio">
+              <label>
+                <input type="radio" ng-model="display" value="display-list">
+                Liste
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" ng-model="display" value="display-mini">
+                Miniature
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="col-sm-6">
+          <form name="sortForm" class="form-horizontal">
+            Tri
+            <div class="radio">
+              <label>
+                <input type="radio" ng-model="display" value="source">
+                Source
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" ng-model="display" value="date">
+                Date
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" ng-model="display" value="relevance">
+                Pertinence
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr/>
+      <ul class="list-unstyled list-document">
+        <li ng-repeat="document in documents | sourcefilter:sources" class="list">
+          <i class="icon-envelope"></i> {{document.title}}
+        </li>
+      </ul>
+    </section>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+http://www.json-generator.com/
+
+[
+    '{{repeat(5, 70)}}',
+    {
+        id: '{{index}}',
+        title: '{{lorem(10,words)}}',
+        created: '{{date(YYYY-MM-ddThh:mm:ss Z)}}',
+        relevance: '{{numeric(0,100)}}',
+        source: function(idx) {
+            var choices = ['Email', 'Contact', 'Meet', 'Todo', 'Layout', 'Article', 'Topic', 'Application', 'Rss', 'Library', 'Directory'];
+            return choices[this.numeric(0, choices.length - 1)];
+        }
+    }
+]

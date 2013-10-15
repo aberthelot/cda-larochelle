@@ -5,9 +5,7 @@ angular.module('cdaLarochelleApp')
   // on récupère les sujets d'actualité
   $scope.topics = Topic.query();
 
-  // console.log('HUHU ' + Topic.query().length);
-  // console.log('YTYT ' + $scope.topics);
-
+  console.log($scope.topics);
 
   // on récupère la date du jour
   var now = moment();

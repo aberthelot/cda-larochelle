@@ -86,6 +86,23 @@ body {
   @include element-drop(red);
 }
 
+ul.list-document {
+  li {
+    background-color: whiteSmoke;
+    margin: 5px 0 5px 0;
+    padding: 10px;
+    border: 1px solid gray;
+  }
+  // li:nth-child(even) {
+  //   background-color: $list-light-even-background-color;
+  //   border-left: $list-light-border-size solid $list-light-even-border-color;
+  // }
+  // li:nth-child(odd) {
+  //   background-color: $list-light-odd-background-color;
+  //   border-left: $list-light-border-size solid $list-light-odd-border-color;
+  // }
+}
+
 ul.list-topic {
   li {
     // background-color: whiteSmoke;
