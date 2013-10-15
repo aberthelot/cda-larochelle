@@ -73,10 +73,12 @@
       </div>
       <hr/>
 
-
+      <ul ng-repeat="source in sources" ng-show="group == 'source'">
+        <i class="{{source.name | iconFilter:sources}}"></i>
+        {{source.name}}
         <ul class="list-unstyled list-document">
 
-          <li ng-repeat="document in documents | groupFilter:sources | orderBy:sort:!reverse" class="list {{display}}">
+          <li ng-repeat="document in documents | groupFilter:source.name | orderBy:sort:!reverse" class="list {{display}}">
             <div class="row">
               <div class="col-sm-8">
                 <i class="{{document.source | iconFilter:sources}}"></i>
@@ -94,8 +96,27 @@
             </div>
           </li>
         </ul>
+      </ul>
 
-
+      <ul class="list-unstyled list-document" ng-show="group == 'global'">
+        <li ng-repeat="document in documents | sourceFilter:sources | orderBy:sort:!reverse" class="list {{display}}">
+          <div class="row">
+            <div class="col-sm-8">
+              <i class="{{document.source | iconFilter:sources}}"></i>
+              {{document.title}}
+            </div>
+            <div class="col-sm-2">
+              {{document.created | date:'shortDate'}}
+            </div>
+            <div class="col-sm-2 text-align-right">
+              {{document.relevance}}
+            </div>
+          </div>
+          <div class="detail">
+            TEST
+          </div>
+        </li>
+      </ul>
 
     </section>
   </div>

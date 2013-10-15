@@ -1,7 +1,7 @@
 http://www.json-generator.com/
 
 [
-    '{{repeat(5, 70)}}',
+    '{{repeat(100, 100)}}',
     {
         id: '{{index}}',
         title: '{{lorem(10,words)}}',
