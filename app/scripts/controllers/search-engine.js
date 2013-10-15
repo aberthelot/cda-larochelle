@@ -5,6 +5,22 @@ angular.module('cdaLarochelleApp')
   // on récupère les documents
   $scope.documents = Document.query();
 
+  $scope.display = 'display-list';
+  $scope.group = 'global';
+  $scope.sort = 'relevance';
+
+  // $scope.sources = [
+  //   {
+  //     "name" : "email",
+  //     "selected" : true
+  //   },
+  //   {
+  //     "name" : "contact",
+  //     "selected" : true
+  //   },
+  // ];  
+
+
   $scope.sources = {
     email: true,
     contact:true,

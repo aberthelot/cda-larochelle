@@ -138,3 +138,21 @@ ul.list-topic {
 .category-2 {
   @include category-variant(purple);
 }
+
+.display-list {
+  .detail {
+    display: none;
+  }
+}
+
+.display-mini {
+  .detail {
+    display: block;
+  }
+}
+
+
+
+
+
+

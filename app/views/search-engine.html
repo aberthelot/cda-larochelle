@@ -3,11 +3,13 @@
   <div class="row">
     <section class="col-sm-4">
       <div class="well well-complementary">
+        <p>Source de la recherche</p>
         <!-- formulaire de recherche -->
         <form name="searchForm" class="form-horizontal">
           <div class="checkbox">
             <label>
               <input type="checkbox" ng-model="sources.email">
+                <i class="icon-envelope"></i>
                 Emails
               </input>
             </label>
@@ -15,6 +17,7 @@
           <div class="checkbox">
             <label>
               <input type="checkbox" ng-model="sources.contact">
+                <i class="icon-user"></i>
                 Contacts
               </input>
             </label>
@@ -22,6 +25,7 @@
           <div class="checkbox">
             <label>
               <input type="checkbox" ng-model="sources.meet">
+                <i class="icon-calendar"></i>
                 Rendez-vous
               </input>
             </label>
@@ -29,6 +33,7 @@
           <div class="checkbox">
             <label>
               <input type="checkbox" ng-model="sources.todo">
+                <i class="icon-edit"></i>
                 Tâches
               </input>
             </label>
@@ -36,6 +41,7 @@
           <div class="checkbox">
             <label>
               <input type="checkbox" ng-model="sources.layout">
+                <i class="icon-columns"></i>
                 Pages (layouts)
               </input>
             </label>
@@ -43,6 +49,7 @@
           <div class="checkbox">
             <label>
               <input type="checkbox" ng-model="sources.article">
+                <i class="icon-align-left"></i>
                 Articles
               </input>
             </label>
@@ -50,6 +57,7 @@
           <div class="checkbox">
             <label>
               <input type="checkbox" ng-model="sources.topic">
+                <i class="icon-file-text-alt"></i>
                 Actualités
               </input>
             </label>
@@ -57,14 +65,15 @@
           <div class="checkbox">
             <label>
               <input type="checkbox" ng-model="sources.application">
+                <i class="icon-dashboard"></i>
                 Les applications
               </input>
             </label>
           </div>
-
           <div class="checkbox">
             <label>
               <input type="checkbox" ng-model="sources.rss">
+                <i class="icon-rss"></i>
                 Flux RSS
               </input>
             </label>
@@ -72,6 +81,7 @@
           <div class="checkbox">
             <label>
               <input type="checkbox" ng-model="sources.library">
+                <i class="icon-folder-open-alt"></i>
                 GED
               </input>
             </label>
@@ -79,18 +89,17 @@
           <div class="checkbox">
             <label>
               <input type="checkbox" ng-model="sources.directory">
+                <i class="icon-group"></i>
                 Annuaire
               </input>
             </label>
           </div>
-
         </form>
       </div>
     </section>
     <section class="col-sm-8">
-
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-4">
           <form name="displayForm" class="form-horizontal">
             Affichage
             <div class="radio">
@@ -107,24 +116,35 @@
             </div>
           </form>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
           <form name="sortForm" class="form-horizontal">
-            Tri
+            Groupement
             <div class="radio">
               <label>
-                <input type="radio" ng-model="display" value="source">
-                Source
+                <input type="radio" ng-model="group" value="global">
+                Général
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" ng-model="display" value="date">
+                <input type="radio" ng-model="group" value="source">
+                Par source
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="col-sm-4">
+          <form name="sortForm" class="form-horizontal">
+            Tri
+            <div class="radio">
+              <label>
+                <input type="radio" ng-model="sort" value="created">
                 Date
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" ng-model="display" value="relevance">
+                <input type="radio" ng-model="sort" value="relevance">
                 Pertinence
               </label>
             </div>
@@ -132,9 +152,40 @@
         </div>
       </div>
       <hr/>
+
+      <ul ng-repeat="source in sources">
+        {{source}}
+      </ul>
+
+
       <ul class="list-unstyled list-document">
-        <li ng-repeat="document in documents | sourcefilter:sources" class="list">
-          <i class="icon-envelope"></i> {{document.title}}
+
+        <li ng-repeat="document in documents | sourcefilter:sources | orderBy:sort:!reverse" class="list {{display}}">
+          <div class="row">
+            <div class="col-sm-8">
+              <i ng-show="document.source == 'Email'" class="icon-envelope"></i>
+              <i ng-show="document.source == 'Contact'" class="icon-user"></i>
+              <i ng-show="document.source == 'Meet'" class="icon-calendar"></i>
+              <i ng-show="document.source == 'Todo'" class="icon-edit"></i>
+              <i ng-show="document.source == 'Layout'" class="icon-columns"></i>
+              <i ng-show="document.source == 'Article'" class="icon-align-left"></i>
+              <i ng-show="document.source == 'Topic'" class="icon-file-text-alt"></i>
+              <i ng-show="document.source == 'Application'" class="icon-dashboard"></i>
+              <i ng-show="document.source == 'Rss'" class="icon-rss"></i>
+              <i ng-show="document.source == 'Library'" class="icon-folder-open-alt"></i>
+              <i ng-show="document.source == 'Directory'" class="icon-group"></i>
+              {{document.title}}
+            </div>
+            <div class="col-sm-2">
+              {{document.created | date:'shortDate'}}
+            </div>
+            <div class="col-sm-2 text-align-right">
+              {{document.relevance}}
+            </div>
+          </div>
+          <div class="detail">
+            TEST
+          </div>
         </li>
       </ul>
     </section>

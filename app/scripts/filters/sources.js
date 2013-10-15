@@ -28,7 +28,7 @@ angular.module('cdaLarochelleApp')
         } else if (items[i].source == 'Todo' && sources.todo) {
           arrayToReturn.push(items[i]);
         } else if (items[i].source == 'Layout' && sources.layout) {
-          arrayToReturn.push(items[i]);
+          arrayToReturn.push(items[i]);M
         } else if (items[i].source == 'Article' && sources.article) {
           arrayToReturn.push(items[i]);
         } else if (items[i].source == 'Topic' && sources.topic) {
