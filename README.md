@@ -19,6 +19,10 @@ Ce projet s'appuie sur [Node.js](http://nodejs.org/) pour la partie serveur (fro
 4. Installer [Compass](http://compass-style.org/install/)
 5. Installer Yeoman et le générateur AngularJS
 
+Installer Bower (il est préférable de s'assurer d'avoir une version récente)
+
+	npm install -g bower
+
 Installer Yeoman
 
 	npm install -g yo
