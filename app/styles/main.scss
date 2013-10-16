@@ -87,10 +87,13 @@ body {
 }
 
 ul.list-document {
+  background-color: white;
+  border: 1px solid gray;
+  padding: 10px;
   li {
     background-color: whiteSmoke;
     margin: 5px 0 5px 0;
-    padding: 10px;
+    padding: 10px 0 10px 0;
     border: 1px solid gray;
   }
   // li:nth-child(even) {
@@ -102,13 +105,17 @@ ul.list-document {
   //   border-left: $list-light-border-size solid $list-light-odd-border-color;
   // }
 }
+ul.list-box {
+  height: 300px;
+  overflow: scroll;
+}
 
 ul.list-topic {
   li {
     // background-color: whiteSmoke;
+    border: 1px solid gray;
     margin: 5px 0 5px 0;
     padding: 10px;
-    border: 1px solid gray;
   }
   // li:nth-child(even) {
   //   background-color: $list-light-even-background-color;
@@ -144,13 +151,27 @@ ul.list-topic {
     display: none;
   }
 }
-
 .display-mini {
   .detail {
     display: block;
   }
 }
 
+.dragobject {
+  border: 1px dashed gray;
+  color: gray;
+  padding: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.dropzone {
+  border: 1px dashed gray;
+  color: gray;
+  padding: 5px;
+}
 
 
 

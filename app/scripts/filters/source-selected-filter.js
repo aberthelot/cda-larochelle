@@ -1,12 +1,12 @@
 'use strict';
 
 angular.module('cdaLarochelleApp')
-  .filter('groupFilter', function () {
-    return function (items, name) {
+  .filter('sourceSelectedFilter', function () {
+    return function (items) {
 
       var arrayToReturn = [];
       for (var i=0; i<items.length; i++) {
-        if (name == items[i].source) {
+        if (items[i].selected) {
           arrayToReturn.push(items[i]);
         }
       }

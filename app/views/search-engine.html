@@ -3,10 +3,21 @@
   <div class="row">
     <section class="col-sm-4">
       <div class="well well-complementary">
-        <p>Source de la recherche</p>
+        <h4>Source de la recherche</h4>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" ng-model="dropavailable">
+              <!-- <i class="{{source.icon}}"></i> -->
+              Permettre la réorganisation
+            </input>
+          </label>
+        </div>
         <!-- formulaire de critères de sources dynamiques -->
         <form name="searchForm" class="form-horizontal">
-          <div ng-repeat="source in sources" class="checkbox">
+          <div ng-repeat="source in sources" class="checkbox" dragsource data-index="{{$index}}">
+            <div class="dropzone" dropsource dropStyle="element-drop" data-index="{{$index}}" ng-show="dropavailable">
+              Déposer ici
+            </div>
             <label>
               <input type="checkbox" ng-model="source.selected">
                 <i class="{{source.icon}}"></i>
@@ -21,7 +32,7 @@
       <div class="row">
         <div class="col-sm-4">
           <form name="displayForm" class="form-horizontal">
-            Affichage
+            <h4>Affichage</h4>
             <div class="radio">
               <label>
                 <input type="radio" ng-model="display" value="display-list">
@@ -38,7 +49,7 @@
         </div>
         <div class="col-sm-4">
           <form name="sortForm" class="form-horizontal">
-            Groupement
+            <h4>Groupement</h4>
             <div class="radio">
               <label>
                 <input type="radio" ng-model="group" value="global">
@@ -55,7 +66,7 @@
         </div>
         <div class="col-sm-4">
           <form name="sortForm" class="form-horizontal">
-            Tri
+            <h4>Tri</h4>
             <div class="radio">
               <label>
                 <input type="radio" ng-model="sort" value="created">
@@ -73,11 +84,12 @@
       </div>
       <hr/>
 
-      <ul ng-repeat="source in sources" ng-show="group == 'source'">
-        <i class="{{source.name | iconFilter:sources}}"></i>
-        {{source.name}}
-        <ul class="list-unstyled list-document">
-
+      <section ng-repeat="source in sources | sourceSelectedFilter" ng-show="group == 'source'">
+        <h4>
+          <i class="{{source.name | iconFilter:sources}}"></i>
+          {{source.name}} - {{(documents | groupFilter:source.name).length}} résultat(s)
+        </h4>
+        <ul class="list-unstyled list-document list-box">
           <li ng-repeat="document in documents | groupFilter:source.name | orderBy:sort:!reverse" class="list {{display}}">
             <div class="row">
               <div class="col-sm-8">
@@ -96,28 +108,29 @@
             </div>
           </li>
         </ul>
-      </ul>
-
-      <ul class="list-unstyled list-document" ng-show="group == 'global'">
-        <li ng-repeat="document in documents | sourceFilter:sources | orderBy:sort:!reverse" class="list {{display}}">
-          <div class="row">
-            <div class="col-sm-8">
-              <i class="{{document.source | iconFilter:sources}}"></i>
-              {{document.title}}
+      </section>
+      <section ng-show="group == 'global'">
+        <h4>{{documents.length}} résultat(s)</h4>
+        <ul class="list-unstyled list-document">
+          <li ng-repeat="document in documents | sourceFilter:sources | orderBy:sort:!reverse" class="list {{display}}">
+            <div class="row">
+              <div class="col-sm-8">
+                <i class="{{document.source | iconFilter:sources}}"></i>
+                {{document.title}} 
+              </div>
+              <div class="col-sm-2">
+                {{document.created | date:'shortDate'}}
+              </div>
+              <div class="col-sm-2 text-align-right">
+                {{document.relevance}}
+              </div>
             </div>
-            <div class="col-sm-2">
-              {{document.created | date:'shortDate'}}
+            <div class="detail">
+              TEST
             </div>
-            <div class="col-sm-2 text-align-right">
-              {{document.relevance}}
-            </div>
-          </div>
-          <div class="detail">
-            TEST
-          </div>
-        </li>
-      </ul>
-
+          </li>
+        </ul>
+      </section>
     </section>
   </div>
 </section>
