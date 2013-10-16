@@ -10,6 +10,7 @@ http://www.json-generator.com/
         source: function(idx) {
             var choices = ['email', 'contact', 'meet', 'todo', 'layout', 'article', 'topic', 'application', 'rss', 'library', 'directory'];
             return choices[this.numeric(0, choices.length - 1)];
-        }
+        },
+        content: '{{lorem(2,paragraphs)}}'
     }
 ]
