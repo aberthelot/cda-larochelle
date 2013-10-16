@@ -3,7 +3,8 @@
 angular.module('cdaLarochelleApp', [
   'TopicServices',
   'DocumentServices',
-  'draganddropUI'
+  'draganddropUI',
+  'ui.highlight'
   ])
   .config(function ($routeProvider) {
     $routeProvider
