@@ -14,7 +14,7 @@ angular.module('cdaLarochelleApp')
 
       var arrayToReturn = [];
       for (var i=0; i<items.length; i++) {
-        if (selectedSources.indexOf(items[i].source) != -1) {
+        if (selectedSources.indexOf(items[i].source.type) != -1) {
           arrayToReturn.push(items[i]);
         }
       }

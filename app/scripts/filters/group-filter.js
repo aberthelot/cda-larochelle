@@ -6,7 +6,7 @@ angular.module('cdaLarochelleApp')
 
       var arrayToReturn = [];
       for (var i=0; i<items.length; i++) {
-        if (name == items[i].source) {
+        if (name == items[i].source.type) {
           arrayToReturn.push(items[i]);
         }
       }
