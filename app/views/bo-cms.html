@@ -22,6 +22,7 @@
 <!--             <i ng-show="topic.isScheduled" class="icon-calendar success"></i>
             <i ng-show="!topic.isScheduled" class="icon-calendar-empty danger"></i> -->
             <span class="label">{{topic.category.title}}</span>
+            <span class="idtopic">[{{topic.id}}]</span>
           </p>
           <p>{{topic.title}}</p>
             <p drag dragStyle="element-drag" data-scheduled="begin" class="scheduling">
@@ -67,6 +68,9 @@
             <p>
               <span class="label">
                 {{topic.category.title}}
+              </span>
+              <span class="idtopic">
+                [{{topic.id}}]
               </span>
             </p>
             <p>
