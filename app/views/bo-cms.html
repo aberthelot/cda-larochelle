@@ -25,54 +25,69 @@
             <span class="idtopic">[{{topic.id}}]</span>
           </p>
           <p>{{topic.title}}</p>
-          <p>Date de publication : {{topic.publishBegin | date:'shortDate'}}</p>
-          <p>Date de péremption : {{topic.publishEnd | date:'shortDate'}}</p>
-          <p drag dragStyle="element-drag" data-scheduled="begin">
-            Date de début : 
-            <span ng-show="topic.isScheduled">
-              {{topic.scheduledBegin | date:'shortDate'}}
-            </span>
-            <span ng-show="!topic.isScheduled">
-              Non planifiée
-            </span>
-            <span class="btn btn-default">
-              <!-- <i class="icon-move"></i> -->
-              <span ng-show="topic.isScheduled">
-                <i class="icon-calendar success"></i>
-                <i class="icon-signin success"></i>
-              </span>
-              <span ng-show="!topic.isScheduled">
-                <i class="icon-calendar-empty danger"></i>
-                <i class="icon-signin danger"></i>
-              </span>
-            </span>
-          </p>
-          <p drag dragStyle="element-drag" data-scheduled="end">
-            Date de fin :
-            <span ng-show="topic.isScheduled">
-                {{topic.scheduledEnd | date:'shortDate'}}
-            </span>
-              <span ng-show="!topic.isScheduled">
-                Non planifiée
-              </span>
-            <span class="btn btn-default">
-              <!-- <i class="icon-move"></i> -->
-              <span ng-show="topic.isScheduled">
-                <i class="icon-calendar success"></i>
-                <i class="icon-signin success"></i>
-              </span>
-              <span ng-show="!topic.isScheduled">
-                <i class="icon-calendar-empty danger"></i>
-                <i class="icon-signin danger"></i>
-              </span>
-            </span>
-          </p>
-          <p>
-            <button class="btn btn-danger btn-xs" ng-show="topic.isScheduled" ng-click="cancelScheduling($index)">
-              <i class="icon-remove"></i> Annuler
-            </button>
-          </p>
           <p><i class="icon-user"></i> {{topic.author}}</p>
+          <p>Publication du {{topic.publishBegin | date:'shortDate'}} au {{topic.publishEnd | date:'shortDate'}}</p>
+          <div class="scheduling">         
+            <div>
+              <p class="alignleft">À la une</p>
+              <p class="alignright">
+                <button class="btn btn-danger btn-xs" ng-show="topic.isScheduled" ng-click="cancelScheduling($index)">
+                  <i class="icon-remove"></i> Annuler
+                </button>
+              </p>
+            </div>
+            <div style="clear: both;"></div>
+            <div class="begin">
+              <p class="alignleft">
+                Date de début : 
+                <span ng-show="topic.isScheduled">
+                  {{topic.scheduledBegin | date:'shortDate'}}
+                </span>
+                <span ng-show="!topic.isScheduled">
+                  Non planifiée
+                </span>
+              </p>
+              <p drag dragStyle="element-drag" data-scheduled="begin" class="alignright">
+                <span class="btn btn-primary">
+                  <!-- <i class="icon-move"></i> -->
+                  <span ng-show="topic.isScheduled">
+                    <i class="icon-calendar"></i>
+                    <i class="icon-signin"></i>
+                  </span>
+                  <span ng-show="!topic.isScheduled">
+                    <i class="icon-calendar-empty"></i>
+                    <i class="icon-signin"></i>
+                  </span>
+                </span>
+              </p>
+            </div>
+            <div style="clear: both;"></div>
+            <div class="end">     
+              <p class="alignleft">
+                Date de fin :
+                <span ng-show="topic.isScheduled">
+                    {{topic.scheduledEnd | date:'shortDate'}}
+                </span>
+                <span ng-show="!topic.isScheduled">
+                  Non planifiée
+                </span>
+              </p>
+              <p drag dragStyle="element-drag" data-scheduled="end" class="alignright">
+                <span class="btn btn-primary">
+                  <!-- <i class="icon-move"></i> -->
+                  <span ng-show="topic.isScheduled">
+                    <i class="icon-calendar"></i>
+                    <i class="icon-signin"></i>
+                  </span>
+                  <span ng-show="!topic.isScheduled">
+                    <i class="icon-calendar-empty"></i>
+                    <i class="icon-signin"></i>
+                  </span>
+                </span>
+              </p>
+            </div>
+            <div style="clear: both;"></div>
+          </div>
         </li>
       <ul>
     </section>

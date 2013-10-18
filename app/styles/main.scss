@@ -181,3 +181,25 @@ ul.list-topic {
   padding-left: 5px;
 }
 
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
+.scheduling {
+  background-color: white;
+  border-top: 1px solid gray;
+  padding: 5px;
+  // padding-top: 5px;
+  p {
+    display: block;
+    text-align: right;
+  }
+  .begin, .end {
+    border-top: 1px dotted gray;
+    padding-top: 3px;
+  }
+}

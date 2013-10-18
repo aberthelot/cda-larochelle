@@ -118,10 +118,12 @@ draganddropUI.directive('drag', ["$rootScope", function($rootScope) {
   function dragStart(evt, element, dragStyle) {
     element.addClass(dragStyle);
 
-    var id = evt.target.parentNode.getAttribute('data-id');
-    var title = evt.target.parentNode.getAttribute('data-title');
-    var category_id = evt.target.parentNode.getAttribute('data-category-id');
-    var category_title = evt.target.parentNode.getAttribute('data-category-title');
+    var target = evt.target.parentNode.parentNode.parentNode;
+
+    var id = target.getAttribute('data-id');
+    var title = target.getAttribute('data-title');
+    var category_id = target.getAttribute('data-category-id');
+    var category_title = target.getAttribute('data-category-title');
     var scheduled = evt.target.getAttribute('data-scheduled');
 
 
