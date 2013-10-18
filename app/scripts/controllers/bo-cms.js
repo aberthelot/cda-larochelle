@@ -53,4 +53,10 @@ angular.module('cdaLarochelleApp')
       $scope.$apply();
   });
 
+  $scope.cancelScheduling = function(index) {
+    $scope.topics[index].isScheduled = false;
+    $scope.topics[index].scheduledBegin = "";
+    $scope.topics[index].scheduledEnd = "";
+  }
+
 });
