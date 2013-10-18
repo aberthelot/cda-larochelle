@@ -20,76 +20,100 @@ angular.module('cdaLarochelleApp')
     $scope.$apply();
   });
 
-  $rootScope.$on('dropon', function(evt) {
-    // console.log('SearchEngineCtrl receive \'dropon\'');
-    $scope.droponair = 'on';
-
-    $scope.$apply();
-  });
-
-  $rootScope.$on('dropoff', function(evt) {
-    // console.log('SearchEngineCtrl receive \'dropon\'');
-    $scope.droponair = 'off';
-
-    $scope.$apply();
-  });
-
   $scope.sources = [
     {
       "name" : "email",
       "selected" : true,
-      "icon" : "icon-envelope"
+      "icon" : "icon-envelope",
+      "parameters" : [
+        {
+          "label" : "De",
+          "type" : "text",
+          "model" : "from.email",
+          "value" : ""
+        },
+        {
+          "label" : "À",
+          "type" : "text",
+          "model" : "to.email",
+          "value" : ""
+        }
+      ]
     },
     {
       "name" : "contact",
-      "selected" : true,
-      "icon" : "icon-user"
+      "selected" : false,
+      "icon" : "icon-user",
+      "parameters" : [
+        {
+          "label" : "Société",
+          "type" : "text",
+          "format" : "",
+          "model" : "company",
+          "value" : ""
+        }
+      ]
     },
     {
       "name" : "meet",
-      "selected" : true,
-      "icon" : "icon-calendar"
+      "selected" : false,
+      "icon" : "icon-calendar",
+      "parameters" : []
     },
     {
       "name" : "todo",
-      "selected" : true,
-      "icon" : "icon-edit"
+      "selected" : false,
+      "icon" : "icon-edit",
+      "parameters" : []
     },
         {
       "name" : "layout",
-      "selected" : true,
-      "icon" : "icon-columns"
+      "selected" : false,
+      "icon" : "icon-columns",
+      "parameters" : []
     },
     {
       "name" : "article",
-      "selected" : true,
-      "icon" : "icon-align-left"
+      "selected" : false,
+      "icon" : "icon-align-left",
+      "parameters" : []
     },
     {
       "name" : "topic",
-      "selected" : true,
-      "icon" : "icon-file-text-alt"
+      "selected" : false,
+      "icon" : "icon-file-text-alt",
+      "parameters" : []
     },
     {
       "name" : "application",
-      "selected" : true,
-      "icon" : "icon-dashboard"
+      "selected" : false,
+      "icon" : "icon-dashboard",
+      "parameters" : []
     },
     {
       "name" : "rss",
-      "selected" : true,
-      "icon" : "icon-rss"
+      "selected" : false,
+      "icon" : "icon-rss",
+      "parameters" : []
     },
     {
       "name" : "library",
-      "selected" : true,
-      "icon" : "icon-folder-open-alt"
+      "selected" : false,
+      "icon" : "icon-folder-open-alt",
+      "parameters" : []
     },
     {
       "name" : "directory",
-      "selected" : true,
-      "icon" : "icon-group"
+      "selected" : false,
+      "icon" : "icon-group",
+      "parameters" : []
     }
   ];
+
+  $scope.deselectall = function() {
+    for (var i = 0; i < $scope.sources.length; i++) {
+      $scope.sources[i].selected = false;
+    }
+  }
 
 });

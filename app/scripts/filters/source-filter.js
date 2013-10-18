@@ -7,15 +7,65 @@ angular.module('cdaLarochelleApp')
       var selectedSources = [];
       for (var i = 0; i < sources.length; i++) {
         if (sources[i].selected) {
-          selectedSources.push(sources[i].name);
+          selectedSources.push(sources[i]);
         }
-      };
-      // console.log('Selected sources : ' + selectedSources);
+      }
+
+
 
       var arrayToReturn = [];
-      for (var i=0; i<items.length; i++) {
-        if (selectedSources.indexOf(items[i].source.type) != -1) {
-          arrayToReturn.push(items[i]);
+      // on parcourt les items à filtrer
+      for (var i = 0; i < items.length; i++) {
+        var item = items[i];
+        // console.log('ID item : ' + item.id);
+
+        // console.log('Nb sources : ' + selectedSources.length);
+
+        for (var j = 0; j < selectedSources.length; j++) {
+          var selectedSource = selectedSources[j];
+          // console.log('Test source : ' + selectedSources[j].name +
+          //   ' =?= ' + item.source.type);
+          // filtre par type de source
+          if (selectedSource.name == item.source.type) {
+            var parametersSource = selectedSource.parameters;
+
+            var dismatch = false;
+
+            for (var k = 0; k < parametersSource.length; k++) {
+              //
+              var parameter = parametersSource[k];
+              // parametersSource[k]
+              // console.log(parameter.label);
+
+              // console.log('Model : ' + parameter.model);
+              // console.log('ID : ' + item.id);
+              // console.log('parameter.value : ' + parameter.value + ' =?= item.source[parameter.model] ' + item.source[parameter.model]);
+
+
+              // if (parameter.model.indexOf('[]') != -1) {
+
+              //   for (var l = 0; l < Thlngs.length; l++) {
+              //     Thlngs[l]
+              //   };
+
+
+
+                // var tab = parameter.model.split('[]');
+
+                dismatch = checkMulti(parameter.model, parameter.value, item.source);
+
+
+              
+            };
+
+            if (!dismatch) {
+              arrayToReturn.push(item);
+            }
+
+
+            // console.log('Push item : ' + item.id);
+            
+          }
         }
       }
       // console.log(arrayToReturn.length + ' result(s) found');
@@ -23,3 +73,61 @@ angular.module('cdaLarochelleApp')
       return arrayToReturn;
     };
   });
+
+function checkMulti(parameterModel, parameterValue, itemSource) {
+
+  var dismatch = false;
+
+  console.log('Parameter model : ' + parameterModel);
+
+  var itemValue = '';
+  if (parameterModel.indexOf('.') != -1) {
+    var split = parameterModel.split('.');
+
+    if (itemSource[split[0]]
+      && typeof itemSource[split[0]] === 'object'
+      && itemSource[split[0]].constructor === Array) {
+      //
+      // console.log('On est tombé sur un tableau !');
+      //
+      var justOneMatch = false;
+      for (var i = 0; i < itemSource[split[0]].length; i++) {
+
+        // console.log('TEST : ' + itemSource[split[0]][i][split[1]]);
+        if (!checkMatchingText(parameterValue, itemSource[split[0]][i][split[1]])) {
+          justOneMatch = true;
+        }
+
+      };
+
+      if (!justOneMatch) {
+        dismatch = true;
+      } 
+
+
+    } else {
+      if (checkMatchingText(parameterValue, itemSource[split[0]][split[1]])) {
+        dismatch = true;
+      }
+    }
+
+
+
+    // itemValue = itemSource[split[0]][split[1]];
+  } else {
+    itemValue = itemSource[parameterModel];
+  }
+
+  return dismatch;
+}
+
+function checkMatchingText(parameterValue, itemValue) {
+
+  var dismatch = false;
+
+  if (parameterValue !== '' && itemValue.indexOf(parameterValue) == -1) {
+    dismatch = true;
+  }
+
+  return dismatch;
+}

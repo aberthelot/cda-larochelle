@@ -20,11 +20,23 @@
             <label>
               <input type="checkbox" ng-model="source.selected">
                 <i class="{{source.icon}}"></i>
-                {{source.name}}
+                {{source.name}} - {{source.parameters.length}}
               </input>
             </label>
+            <div ng-repeat="parameter in source.parameters">
+              <label>
+                {{parameter.label}}
+                <input type="{{parameter.type}}" ng-model="parameter.value"></input>
+              </label>
+            </div>
           </div>
         </form>
+        <div>
+          <label>
+            <input type="checkbox" ng-click="deselectall()"></input>
+            Déselection
+          </label>
+        </div>
       </div>
     </section>
     <section class="col-sm-8">
@@ -107,7 +119,7 @@
         </ul>
       </section>
       <section ng-show="group == 'global'">
-        <h4>{{(documents | sourceFilter:sources | filter:texttosearch).length}} résultat(s)</h4>
+        <!-- <h4>{{(documents | sourceFilter:sources | filter:texttosearch).length}} résultat(s)</h4> -->
         <ul class="list-unstyled list-document">
           <li ng-repeat="document in documents | sourceFilter:sources | filter:texttosearch | orderBy:sort:!reverse" class="list {{display}}">
             <p>

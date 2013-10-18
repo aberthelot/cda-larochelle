@@ -17,7 +17,12 @@
         "relevance": 42,
         "source":
         {
-            "type":  "contact"
+            "type":  "contact",
+            "lastname": "gdfgdf",
+            "firstname": "jgggghj",
+            "company": "ipponu",
+            "phone": "khkjhkj",
+            "fileowner": "g jh hjg hvh vh v"
         },
         "content": "Commodo quis dolore quis eu ipsum. Pariatur incididunt minim dolore adipisicing elit et reprehenderit reprehenderit officia est quis. Officia magna id sit excepteur exercitation est aliquip cupidatat culpa minim laborum Lorem aliquip et. Sit ad elit aliquip in.\r\nPariatur aute amet ut velit. Duis irure excepteur esse duis esse reprehenderit ipsum commodo do laborum dolore est. Adipisicing enim et minim consectetur sint ex est. Elit excepteur elit laborum est pariatur id nulla. Quis excepteur magna aute aute nisi fugiat consequat commodo. Culpa duis dolore fugiat anim. Nulla dolor veniam esse consequat culpa in exercitation nulla.\r\n"
     },
@@ -39,7 +44,7 @@
         "relevance": 18,
         "source":
         {
-            "type":  "article"
+            "type":  "todo"
         },
         "content": "Adipisicing est sint dolore veniam fugiat commodo reprehenderit pariatur ullamco occaecat et adipisicing ipsum consectetur. Aute laborum anim exercitation veniam aliquip. Officia consectetur irure ipsum amet qui dolore enim do. Anim consequat duis nisi anim voluptate ut aute deserunt anim exercitation quis. Sint exercitation elit anim adipisicing laboris non quis incididunt non cillum veniam. Sint eiusmod aute dolore ex sit id fugiat anim non eu ipsum.\r\nCommodo pariatur nisi enim Lorem enim officia minim labore quis laboris dolor qui reprehenderit. Elit magna eu Lorem anim dolore ex nulla ex consequat labore qui officia. Exercitation sit proident dolor consequat ut duis qui enim cillum eiusmod elit labore aliqua. Commodo aliqua magna esse sunt cillum proident occaecat velit eu velit officia sint elit exercitation. Ea tempor occaecat occaecat Lorem sunt eu ipsum Lorem adipisicing. Eu duis veniam nulla veniam aliquip.\r\n"
     },
@@ -50,7 +55,13 @@
         "relevance": 0,
         "source":
         {
-            "type":  "email"
+            "type":  "email",
+            "attachment":  "",
+            "from": {"email": "test1@ippon.fr"},
+            "to": [
+              {"email": "test2@ippon.fr"},
+              {"email": "test3@ippon.fr"}
+            ]
         },
         "content": "Consequat proident occaecat aliquip id non officia eu fugiat. Adipisicing nostrud pariatur ut incididunt labore aliquip velit consectetur duis amet non Lorem amet. Quis duis labore nulla commodo tempor incididunt minim sit voluptate. Aliqua amet in duis ipsum exercitation voluptate dolor. Dolor officia esse tempor officia laboris ut culpa. Sit occaecat fugiat irure mollit elit esse tempor id et elit Lorem ad. Cillum magna Lorem in excepteur in adipisicing officia.\r\nCupidatat et eu mollit adipisicing ad veniam. Aliquip aliqua dolor enim quis aute incididunt excepteur officia laborum velit est. Laborum occaecat mollit dolore sunt id ullamco. Id sunt et sunt qui quis esse laborum velit est. Labore irure nisi dolor tempor nisi ad veniam officia eu elit incididunt. Aliquip ex nostrud irure et nostrud commodo magna dolor ut ullamco cupidatat. Minim aute esse occaecat quis ad eu sunt non velit culpa est ullamco.\r\n"
     },
@@ -105,7 +116,13 @@
         "relevance": 18,
         "source":
         {
-            "type":  "email"
+            "type":  "email",
+            "attachment":  "",
+            "from": {"email": "test1@ippon.fr"},
+            "to": [
+              {"email": "test2@ippon.fr"},
+              {"email": "test3@ippon.fr"}
+            ]
         },
         "content": "Minim duis amet ullamco adipisicing tempor ea dolore. Ullamco aliquip labore id ex nostrud sunt. Veniam ut laboris commodo laborum veniam sunt laborum laborum aute fugiat pariatur sunt magna occaecat. Elit dolor mollit consequat id sit fugiat proident consectetur id reprehenderit. Consequat officia incididunt id enim velit sint. Ullamco nostrud reprehenderit velit ullamco cillum aliquip excepteur ullamco et nisi minim non in.\r\nIpsum pariatur incididunt nostrud sint exercitation nulla fugiat dolor velit occaecat deserunt. Laboris ullamco consequat in ipsum sint est minim commodo. Dolor culpa ipsum elit est esse occaecat minim esse enim minim.\r\n"
     },
@@ -160,7 +177,7 @@
         "relevance": 44,
         "source":
         {
-            "type":  "article"
+            "type":  "todo"
         },
         "content": "Sint non sunt exercitation non laboris ut dolore ut aliqua duis fugiat elit. Est sint labore cupidatat esse quis ea incididunt. Commodo anim esse aliqua minim ad labore culpa. Exercitation minim minim incididunt anim officia. Voluptate nulla ut esse et minim proident occaecat voluptate quis. Eu sint aute incididunt mollit. Et incididunt et sint dolor minim minim duis sint culpa commodo in consectetur.\r\nConsequat amet aliquip officia nulla exercitation irure cillum est quis minim. Occaecat qui dolore aliqua adipisicing laboris veniam sit dolore reprehenderit pariatur. Tempor fugiat officia do ullamco. Duis laboris officia nostrud cillum nulla est consectetur ad sunt ullamco.\r\n"
     },
@@ -215,7 +232,7 @@
         "relevance": 69,
         "source":
         {
-            "type":  "article"
+            "type":  "todo"
         },
         "content": "Velit qui magna id id occaecat culpa non nisi amet est voluptate. Laboris fugiat aute ad mollit quis ut laborum enim consequat irure minim commodo id sunt. Sint ullamco consectetur pariatur eiusmod. Aliquip esse quis mollit dolore eu aliquip ut. Culpa sunt eu anim nisi consectetur aliqua ut nulla esse cillum. Exercitation nisi sint quis pariatur tempor aliquip magna sit eiusmod qui sunt sit. Exercitation est occaecat quis excepteur fugiat.\r\nEx nisi nisi laborum consequat quis. Sit id eu fugiat aliquip ut labore ad sunt officia. Nostrud anim officia do eu non consequat. Irure laboris enim incididunt duis dolor reprehenderit. Labore amet ut ea consectetur quis dolore consectetur duis nulla consequat fugiat. Enim esse cupidatat exercitation proident cupidatat occaecat aute dolor ea. Ullamco amet Lorem aute aliqua deserunt fugiat mollit aliquip in duis laborum elit minim consectetur.\r\n"
     },
@@ -314,7 +331,7 @@
         "relevance": 0,
         "source":
         {
-            "type":  "article"
+            "type":  "todo"
         },
         "content": "Est consequat exercitation ea in veniam enim consectetur eiusmod ad qui amet labore tempor. Sit eiusmod qui nisi ullamco nulla quis commodo eu aliquip est laboris excepteur. Sit elit minim Lorem laborum.\r\nExercitation dolore cillum ipsum cupidatat nostrud laborum consequat et sit enim ea. In ut enim ipsum amet. Commodo excepteur adipisicing aute adipisicing adipisicing veniam est do aute sunt id. Sint magna commodo deserunt adipisicing nulla qui nostrud. Culpa ad laboris occaecat occaecat culpa id reprehenderit proident culpa cupidatat est.\r\n"
     },
@@ -325,7 +342,7 @@
         "relevance": 13,
         "source":
         {
-            "type":  "article"
+            "type":  "todo"
         },
         "content": "In non aliquip sunt ullamco aliquip cupidatat et esse tempor dolor. Laboris fugiat ad dolor amet aliquip aliquip ea nisi laboris. Lorem in enim exercitation ad deserunt anim aliqua excepteur magna anim laborum voluptate. Excepteur labore tempor cillum minim velit cillum officia. Pariatur fugiat aliquip exercitation aliquip. Ut magna ut ipsum enim fugiat culpa. Ea non commodo nisi ea do.\r\nEnim irure magna proident consectetur id. Nisi ea commodo minim ad veniam. Tempor commodo do in ex eu voluptate dolor reprehenderit. Amet qui dolore id amet est incididunt duis dolore commodo ipsum ullamco deserunt. Ullamco minim sit anim sint.\r\n"
     },
@@ -358,7 +375,7 @@
         "relevance": 86,
         "source":
         {
-            "type":  "article"
+            "type":  "meet"
         },
         "content": "Ut ea id amet anim ea. Nulla enim elit laboris sit voluptate. Aliquip labore voluptate dolor velit sunt. Laborum quis labore consequat ullamco. Cupidatat culpa occaecat proident fugiat non magna et esse nisi magna magna anim.\r\nDeserunt culpa occaecat proident aliqua ea fugiat excepteur mollit velit duis. Esse in mollit qui elit mollit adipisicing velit adipisicing elit culpa id adipisicing. Qui non consectetur irure quis duis duis excepteur nulla laboris amet nulla.\r\n"
     },
@@ -391,7 +408,7 @@
         "relevance": 46,
         "source":
         {
-            "type":  "article"
+            "type":  "meet"
         },
         "content": "Velit quis laboris et ex commodo amet aliquip eu. Est esse amet irure dolor ea nisi elit cillum commodo do magna. Quis nostrud occaecat nulla culpa exercitation ex qui ea consectetur eu sunt reprehenderit. Ex eu aute pariatur aliquip. Adipisicing fugiat proident qui occaecat minim magna eiusmod dolore voluptate est consequat dolor officia in.\r\nReprehenderit nulla voluptate magna laboris deserunt excepteur aliqua incididunt deserunt fugiat nisi magna. Anim duis magna exercitation aute reprehenderit enim. Ullamco pariatur cupidatat nisi dolore amet elit amet adipisicing aute proident exercitation mollit. Sunt velit duis ad duis id minim ad voluptate enim irure quis.\r\n"
     },
@@ -402,7 +419,7 @@
         "relevance": 18,
         "source":
         {
-            "type":  "article"
+            "type":  "meet"
         },
         "content": "Esse excepteur dolore id anim aute consequat. Aute excepteur ullamco sint id Lorem nostrud esse laboris sint nostrud. Ut aliqua sit et anim fugiat ex ea Lorem aliquip consectetur esse cillum fugiat nulla. Exercitation qui incididunt fugiat non ullamco qui et velit est. In sint deserunt qui consectetur ipsum velit cillum exercitation Lorem et.\r\nIpsum voluptate laborum et irure dolor enim non culpa magna sint cupidatat laborum ex incididunt. Consectetur enim laboris dolor voluptate in consequat et nostrud. Veniam ex quis non minim enim do tempor fugiat ad excepteur voluptate. Est ipsum Lorem ipsum ut sit duis sit mollit dolore voluptate mollit excepteur laboris. Laborum mollit velit aliqua pariatur laboris eu enim. Non consectetur labore excepteur consectetur.\r\n"
     },
@@ -413,7 +430,7 @@
         "relevance": 13,
         "source":
         {
-            "type":  "article"
+            "type":  "meet"
         },
         "content": "Nulla voluptate eiusmod in proident qui nulla mollit et cillum. Ut ut sint sit elit nisi reprehenderit consectetur aliqua aute laboris proident incididunt amet labore. Veniam laborum quis proident mollit dolor nulla laborum quis enim exercitation ullamco labore. Enim nostrud commodo velit excepteur ad. Occaecat dolor exercitation quis dolor aliqua anim reprehenderit. Ullamco nisi est qui ullamco enim irure in mollit irure culpa sunt consectetur incididunt occaecat.\r\nConsectetur anim mollit eu id enim tempor ut ullamco dolore laborum tempor culpa labore. Reprehenderit do ut ipsum officia magna consequat ad tempor quis ex. Dolor cupidatat dolor anim deserunt sint in et non minim. Do aliqua minim qui ex tempor sunt reprehenderit exercitation. Lorem fugiat sint laborum dolore. Velit deserunt enim officia fugiat ad excepteur elit non aliquip adipisicing sint sit officia.\r\n"
     },
@@ -424,7 +441,7 @@
         "relevance": 69,
         "source":
         {
-            "type":  "article"
+            "type":  "meet"
         },
         "content": "Ullamco sit fugiat do non fugiat deserunt id duis. Ipsum non aute anim incididunt reprehenderit minim do ex qui nostrud consectetur nulla dolor amet. Quis amet incididunt nostrud non do officia amet id eu culpa aliquip. Ea et consectetur reprehenderit ullamco ad ullamco ex.\r\nEst Lorem pariatur aliqua ad proident sit non excepteur ad proident eu deserunt irure. Sint aliqua minim veniam non. Velit cillum non duis velit. Reprehenderit est amet in laborum eu dolor exercitation velit veniam. Reprehenderit reprehenderit laboris sit anim aliqua.\r\n"
     },
@@ -512,7 +529,12 @@
         "relevance": 38,
         "source":
         {
-            "type":  "article"
+            "type":  "contact",
+            "lastname": "gdfgdf",
+            "firstname": "jgggghj",
+            "company": "ippone",
+            "phone": "khkjhkj",
+            "fileowner": "g jh hjg hvh vh v"
         },
         "content": "Et ea in eu anim Lorem duis mollit consequat. Id eu cupidatat magna et. Reprehenderit duis ea officia aliqua ex nisi.\r\nPariatur labore laboris enim ad magna enim esse. Ad consectetur aliqua culpa do laboris elit minim aliquip nisi fugiat voluptate aliqua incididunt. Incididunt et occaecat qui sit. Duis dolor magna dolore ut Lorem officia. Ex consectetur officia minim labore dolor dolore et fugiat exercitation. Pariatur minim eiusmod duis reprehenderit non anim pariatur nulla sint dolor eu nulla. Esse proident officia duis ea enim aute mollit sint ex sit adipisicing dolore.\r\n"
     },
@@ -523,7 +545,12 @@
         "relevance": 81,
         "source":
         {
-            "type":  "article"
+            "type":  "contact",
+            "lastname": "gdfgdf",
+            "firstname": "jgggghj",
+            "company": "ipponei",
+            "phone": "khkjhkj",
+            "fileowner": "g jh hjg hvh vh v"
         },
         "content": "Occaecat velit non ipsum aute veniam voluptate. Deserunt excepteur pariatur sint et velit nostrud deserunt est do sit officia nisi tempor elit. Irure aute mollit fugiat elit ea. Cillum veniam irure labore dolore anim do. Id incididunt sunt laboris eiusmod qui sint. Ut mollit cupidatat incididunt duis ex labore id non culpa cupidatat labore aliqua labore nostrud.\r\nVoluptate culpa dolore tempor amet commodo duis ipsum proident qui mollit. Ipsum nisi eiusmod cillum id duis velit proident tempor ea magna excepteur. Eiusmod quis sunt exercitation sunt laborum exercitation occaecat id pariatur sunt enim dolore eu. Veniam sunt et irure velit aliquip et sint veniam irure dolor minim. Adipisicing aliqua ipsum veniam non officia proident. Nostrud est et mollit aliquip nisi ex laboris exercitation in aliqua sint minim laborum. In Lorem velit esse occaecat dolore elit elit et laborum.\r\n"
     },
@@ -534,7 +561,12 @@
         "relevance": 43,
         "source":
         {
-            "type":  "article"
+            "type":  "contact",
+            "lastname": "gdfgdf",
+            "firstname": "jgggghj",
+            "company": "ipponi",
+            "phone": "khkjhkj",
+            "fileowner": "g jh hjg hvh vh v"
         },
         "content": "Tempor magna voluptate quis labore consequat nisi anim in. Eu ipsum mollit aliquip tempor deserunt cupidatat incididunt. Anim est sunt proident ut aliquip nulla non. Quis ipsum Lorem proident amet amet ex culpa Lorem ullamco proident nisi officia. Laborum nostrud et amet est occaecat do esse. Laboris Lorem ad fugiat fugiat eiusmod laborum. Tempor aliqua dolore elit culpa exercitation occaecat exercitation elit est do pariatur.\r\nEx culpa duis sunt tempor labore aliquip cillum culpa cillum. Esse minim do pariatur laboris Lorem nisi dolore voluptate sint. Consectetur proident id culpa nulla minim esse est. Incididunt sit mollit commodo nostrud ut enim ullamco do ut esse id cupidatat enim.\r\n"
     },
@@ -567,7 +599,13 @@
         "relevance": 63,
         "source":
         {
-            "type":  "email"
+            "type":  "email",
+            "attachment":  "",
+            "from": {"email": "test1@ippon.fr"},
+            "to": [
+              {"email": "test2@ippon.fr"},
+              {"email": "test3@ippon.fr"}
+            ]
         },
         "content": "Adipisicing ex non aute culpa proident. Dolor reprehenderit Lorem sunt deserunt dolor pariatur do aute culpa mollit est in ad. Pariatur velit do duis aliquip cupidatat ea irure.\r\nCillum ad mollit laborum nisi labore excepteur nostrud dolor. Ullamco sit aliqua eu aliqua ipsum incididunt dolore nostrud occaecat consectetur duis duis. Eu sunt aliquip non labore officia. Ut irure cupidatat aliqua non pariatur cillum veniam magna amet minim. Laborum Lorem sit ipsum cillum nulla cupidatat dolore veniam velit sint nulla. Enim tempor cillum anim magna in ut dolore ea pariatur irure voluptate. Ad deserunt consectetur culpa ullamco ad excepteur adipisicing aliqua nostrud laborum esse aliqua.\r\n"
     },
@@ -600,7 +638,7 @@
         "relevance": 82,
         "source":
         {
-            "type":  "article"
+            "type":  "layout"
         },
         "content": "Aliquip id aute do nulla laborum dolor sunt incididunt non. Aliqua reprehenderit adipisicing deserunt id amet aliqua cillum officia officia magna nulla ex. Et fugiat aliqua eu eu qui Lorem exercitation eu et culpa. Reprehenderit aliquip exercitation sit aliqua labore cillum occaecat laborum qui officia cillum voluptate. Reprehenderit anim quis voluptate veniam laboris dolor sit labore. Qui tempor sunt fugiat culpa quis velit. Sint ipsum non exercitation dolor in velit cupidatat.\r\nQui Lorem ea officia dolore laborum qui ea aliqua occaecat occaecat non irure cupidatat. Aute deserunt duis dolore exercitation ut. Laboris exercitation non veniam enim pariatur laboris do nisi enim dolore minim ullamco laboris. In deserunt ipsum aute eiusmod ut deserunt exercitation qui occaecat enim consectetur. Laborum pariatur id ex sint ullamco culpa fugiat excepteur esse ut. Esse et sit quis voluptate velit aliquip voluptate ut non proident. Occaecat sit quis do ullamco cupidatat commodo duis eu nisi magna adipisicing.\r\n"
     },
@@ -611,7 +649,7 @@
         "relevance": 53,
         "source":
         {
-            "type":  "article"
+            "type":  "layout"
         },
         "content": "Amet cillum sunt labore occaecat amet laborum sunt quis aliqua officia ea officia excepteur. Commodo consequat veniam occaecat do quis do sit quis id. Occaecat cupidatat eiusmod aute adipisicing elit tempor tempor esse deserunt velit deserunt magna. Non in non magna reprehenderit fugiat. Pariatur fugiat pariatur culpa ex esse amet ullamco occaecat anim dolore irure.\r\nSit irure labore aliquip aliqua id dolor ipsum est cillum aliquip velit ut. Lorem sint enim voluptate pariatur ad duis laboris reprehenderit. In mollit anim minim do officia aute. Veniam qui labore anim cillum elit nisi consequat enim nulla. Consectetur id aliqua sunt do ad officia laboris ipsum magna magna irure consectetur. Ullamco qui pariatur laboris commodo laboris minim minim non reprehenderit pariatur do do mollit nisi.\r\n"
     },
@@ -622,7 +660,7 @@
         "relevance": 28,
         "source":
         {
-            "type":  "article"
+            "type":  "layout"
         },
         "content": "Dolor sunt excepteur irure proident ut esse cupidatat pariatur. Culpa amet ipsum do consequat tempor cillum fugiat id ut cupidatat non commodo ex. Sit mollit sint aliqua incididunt. Ut est enim dolore laborum aute laboris irure magna nostrud officia. Sint cillum proident excepteur ex voluptate sit reprehenderit. Enim velit occaecat sunt anim. Ullamco id tempor id nostrud.\r\nNostrud consequat culpa qui commodo dolore culpa ullamco minim culpa consequat ex ex in. Ad proident nostrud nulla aute minim anim irure officia dolore est sunt adipisicing. Labore pariatur nisi esse est eu ullamco.\r\n"
     },
@@ -633,7 +671,7 @@
         "relevance": 2,
         "source":
         {
-            "type":  "article"
+            "type":  "layout"
         },
         "content": "Laborum excepteur non ad consequat dolore magna aliqua officia veniam laborum. Culpa enim anim consectetur duis ut sit aliqua nulla velit nisi reprehenderit. Dolore ipsum nulla anim irure ipsum. Velit consequat laboris sunt et anim aliquip id non dolore ex et fugiat.\r\nVeniam laborum Lorem eiusmod Lorem sint qui elit irure. Commodo dolore ullamco irure ipsum cupidatat nostrud ad. Irure enim cillum aliquip cupidatat sit pariatur.\r\n"
     },
@@ -644,7 +682,7 @@
         "relevance": 31,
         "source":
         {
-            "type":  "article"
+            "type":  "layout"
         },
         "content": "Culpa nisi adipisicing est tempor consectetur incididunt qui dolore dolor ea pariatur amet enim. Dolor ullamco anim et culpa officia quis. Lorem proident ipsum commodo veniam nisi tempor occaecat consequat deserunt eiusmod. Magna ut amet nostrud officia sit do voluptate labore proident ea irure. In laborum nisi eu mollit nulla sint enim pariatur nulla ex non voluptate ullamco elit. Quis et tempor magna anim id elit ea nulla aliqua in laboris ullamco enim non.\r\nCulpa occaecat deserunt sit ipsum sunt tempor cillum ex consectetur. Esse fugiat Lorem aliqua ullamco velit ex nisi id excepteur eu incididunt nostrud eiusmod. Ex cillum mollit elit deserunt reprehenderit minim excepteur deserunt veniam elit. Voluptate ipsum dolore nostrud cillum in laborum voluptate eiusmod magna. Commodo velit cillum sunt aliqua velit veniam ea non velit incididunt. Magna ad ipsum ea incididunt et minim minim duis commodo dolor amet adipisicing fugiat aliqua. Ullamco nulla Lorem ea enim sit et exercitation cillum velit dolore qui eu.\r\n"
     },
@@ -655,7 +693,7 @@
         "relevance": 7,
         "source":
         {
-            "type":  "article"
+            "type":  "layout"
         },
         "content": "Irure voluptate aute proident do aliqua eiusmod fugiat irure magna occaecat irure. Nostrud veniam deserunt ad non officia in ex fugiat consectetur esse eu sunt. Sunt cillum do dolore cillum aliqua non in cillum tempor ex.\r\nIrure labore deserunt cupidatat aliqua dolore ex velit culpa velit ex mollit laborum enim. Id quis fugiat duis qui est sunt laboris qui irure minim nulla anim ex veniam. Ex elit exercitation incididunt culpa sunt.\r\n"
     },
@@ -677,7 +715,7 @@
         "relevance": 46,
         "source":
         {
-            "type":  "article"
+            "type":  "layout"
         },
         "content": "Esse enim adipisicing ullamco tempor ut nisi. Excepteur minim in cupidatat non proident aliquip ex enim adipisicing consequat reprehenderit laboris. Quis in ea incididunt est tempor dolor qui dolor fugiat minim mollit.\r\nUt voluptate labore sint minim mollit tempor sit et laborum. Esse ullamco deserunt quis labore sint aliqua velit commodo est cupidatat reprehenderit elit reprehenderit. Velit ex cupidatat mollit irure. Ipsum ipsum sint dolore sit sint dolor. Proident dolor non culpa laboris magna ipsum sit voluptate eiusmod Lorem consequat Lorem nostrud irure. Sunt eu elit est deserunt enim in magna voluptate cillum velit mollit laboris exercitation.\r\n"
     },
@@ -688,7 +726,7 @@
         "relevance": 95,
         "source":
         {
-            "type":  "article"
+            "type":  "layout"
         },
         "content": "Dolor cupidatat consectetur enim cupidatat sit voluptate officia. Duis pariatur consectetur non ad incididunt laboris. Proident culpa consectetur consequat labore minim mollit minim exercitation. Culpa amet aliquip nisi amet reprehenderit dolore Lorem in incididunt Lorem adipisicing. Lorem Lorem commodo minim id nostrud velit id ut deserunt labore laboris exercitation. Minim ipsum cillum reprehenderit veniam magna fugiat cillum dolore.\r\nNisi mollit sunt in ex cupidatat ad sint amet veniam. Fugiat do nostrud exercitation esse fugiat est ex magna sit anim commodo officia labore ad. Voluptate amet nostrud elit in adipisicing consectetur irure. Consequat tempor consectetur commodo cupidatat. Fugiat quis voluptate ut aliquip ea velit.\r\n"
     },
@@ -699,7 +737,7 @@
         "relevance": 72,
         "source":
         {
-            "type":  "article"
+            "type":  "layout"
         },
         "content": "Do adipisicing sunt ut voluptate dolore quis in id pariatur Lorem ullamco irure. Proident nisi cupidatat voluptate occaecat adipisicing reprehenderit quis minim nisi nostrud. Esse enim sit elit dolore amet ex. Consectetur adipisicing id in ea ut amet duis ad. Nulla consequat ipsum culpa ipsum incididunt laborum qui velit. Cillum consectetur non amet veniam aliquip dolor est Lorem qui et sunt incididunt. Culpa in aute consequat eu excepteur veniam.\r\nEsse id occaecat culpa anim occaecat. Ex occaecat ex aliquip esse. Proident tempor occaecat duis sint ipsum occaecat. Est dolore amet aute ullamco est dolore.\r\n"
     },
@@ -710,7 +748,7 @@
         "relevance": 11,
         "source":
         {
-            "type":  "article"
+            "type":  "library"
         },
         "content": "Ullamco adipisicing consectetur dolor voluptate exercitation reprehenderit sunt officia sit aliqua amet eiusmod. Consectetur irure deserunt ex officia. Lorem cillum ad amet qui deserunt non eiusmod id. Cupidatat amet nulla labore in magna cillum. Ea do sit aliqua aliquip eu veniam ut quis consectetur.\r\nEt tempor Lorem quis excepteur sunt. Cillum ex cillum adipisicing sit fugiat irure pariatur aute id. Aliquip nisi nostrud sint nisi consequat consequat. Sint incididunt sint ea anim. Cupidatat in sit non Lorem enim id id aliqua culpa non aliquip incididunt. Duis officia est ea elit.\r\n"
     },
@@ -721,7 +759,13 @@
         "relevance": 92,
         "source":
         {
-            "type":  "email"
+            "type":  "email",
+            "attachment":  "",
+            "from": {"email": "test1@ippon.fr"},
+            "to": [
+              {"email": "test2@ippon.fr"},
+              {"email": "test3@ippon.fr"}
+            ]
         },
         "content": "Ea sit sint duis ex ea proident exercitation adipisicing elit consectetur eu deserunt laboris cillum. Ad fugiat aliqua incididunt ea reprehenderit laborum enim reprehenderit sunt eu. Laboris et esse occaecat consectetur tempor minim eiusmod et culpa laboris cupidatat in tempor. Minim elit est adipisicing ut in nulla.\r\nCupidatat velit mollit exercitation adipisicing minim officia voluptate dolore Lorem consectetur ipsum. Aute id nisi do laborum exercitation do laboris cillum mollit commodo tempor laboris do. Ea officia esse voluptate ea deserunt. Cupidatat culpa nisi esse cillum. Consectetur tempor sit incididunt cupidatat est cillum aliqua officia Lorem cupidatat.\r\n"
     },
@@ -743,7 +787,7 @@
         "relevance": 77,
         "source":
         {
-            "type":  "article"
+            "type":  "library"
         },
         "content": "Nulla non in tempor ea aute ea incididunt eiusmod nisi ut et duis minim. Sint non sunt exercitation aute tempor Lorem. Incididunt dolor dolore dolore adipisicing labore minim sint sint anim reprehenderit. Exercitation exercitation cillum qui aliqua aute id elit enim ea.\r\nQui commodo qui exercitation non dolor. Irure nostrud laborum pariatur voluptate velit eiusmod. Nostrud aliquip duis qui aliqua enim sit nostrud dolore. Consectetur duis ex qui eiusmod cillum labore est. Amet non irure reprehenderit nisi commodo ad magna aliqua cupidatat officia adipisicing qui. In laboris proident cillum est magna magna ad laboris. Labore reprehenderit amet tempor cupidatat ex culpa proident excepteur eiusmod.\r\n"
     },
@@ -754,7 +798,7 @@
         "relevance": 8,
         "source":
         {
-            "type":  "article"
+            "type":  "library"
         },
         "content": "Exercitation excepteur anim sint Lorem culpa consequat. In id aliqua velit ex do. Deserunt laboris eu veniam laborum adipisicing. Minim ut irure minim occaecat fugiat. Amet Lorem mollit tempor dolor irure incididunt ut eiusmod non. Tempor irure reprehenderit dolor consequat irure. Anim consequat qui pariatur magna dolore Lorem labore proident magna amet non consequat dolore.\r\nLaboris cupidatat adipisicing aute excepteur tempor excepteur pariatur proident. Minim in magna pariatur nulla cillum fugiat mollit aute. Aute occaecat ad laboris amet sint id reprehenderit et proident ea minim. Excepteur aliquip mollit sit aliqua aute est ipsum consectetur consectetur. Exercitation magna nulla excepteur mollit excepteur officia pariatur Lorem minim anim occaecat proident ut. Id pariatur non sit voluptate dolor incididunt laboris dolore cupidatat ea pariatur eu.\r\n"
     },
@@ -765,7 +809,7 @@
         "relevance": 30,
         "source":
         {
-            "type":  "article"
+            "type":  "library"
         },
         "content": "Ad elit magna do et minim anim tempor pariatur amet duis. Ut eu velit aliqua id proident. Culpa aliquip consequat ea ullamco sint labore labore ad laboris occaecat aute ea do.\r\nExercitation non nostrud cupidatat minim aliqua exercitation quis esse consequat nulla commodo in. Mollit laborum ut duis irure amet nulla nulla fugiat qui cillum. Eu in aliquip et cillum labore cillum.\r\n"
     },
@@ -787,7 +831,13 @@
         "relevance": 92,
         "source":
         {
-            "type":  "email"
+            "type":  "email",
+            "attachment":  "",
+            "from": {"email": "test1@ippon.fr"},
+            "to": [
+              {"email": "test2@ippon.fr"},
+              {"email": "test3@ippon.fr"}
+            ]
         },
         "content": "Adipisicing do labore quis minim sunt consequat ea magna. Ipsum velit sint velit qui dolor anim consequat nulla voluptate eu est exercitation commodo Lorem. Deserunt adipisicing consequat consectetur aliqua. Dolor elit nisi dolore cupidatat consectetur ullamco.\r\nTempor anim magna sint mollit magna enim irure proident nulla aute deserunt deserunt officia eiusmod. Ex nisi laboris fugiat reprehenderit in. Tempor mollit quis nisi anim Lorem in eu veniam non. Pariatur voluptate sunt anim dolor pariatur. Pariatur sit exercitation et labore et minim labore occaecat commodo aute mollit reprehenderit in.\r\n"
     },
@@ -798,7 +848,7 @@
         "relevance": 70,
         "source":
         {
-            "type":  "article"
+            "type":  "library"
         },
         "content": "Enim ullamco sit consectetur officia commodo culpa excepteur nulla cillum voluptate est anim. Duis voluptate do fugiat enim nostrud cillum dolore dolore. Ipsum non officia veniam labore nostrud deserunt adipisicing labore sit eu veniam incididunt. Cillum aliqua fugiat ullamco mollit enim fugiat. Magna eiusmod pariatur in Lorem incididunt quis aliquip magna. Exercitation non sunt pariatur aute voluptate enim minim.\r\nDolor laborum non eiusmod eu id labore sunt ipsum tempor. Ex commodo elit ex ipsum ullamco laborum laborum nisi dolor cillum est nulla laborum ullamco. Consequat Lorem qui veniam labore cillum id. Fugiat magna qui laboris in. Veniam aliquip deserunt duis ut veniam ea nulla sit magna tempor.\r\n"
     },
@@ -809,7 +859,7 @@
         "relevance": 41,
         "source":
         {
-            "type":  "article"
+            "type":  "directory"
         },
         "content": "Voluptate est aliquip ullamco ut velit sunt fugiat Lorem exercitation. Sunt dolore commodo proident incididunt anim adipisicing do aliquip culpa nulla elit. Proident sint officia laboris anim labore minim dolor Lorem sunt dolore excepteur elit veniam. In adipisicing velit ipsum et ex cillum anim sint quis dolor. Adipisicing nostrud eiusmod dolor quis magna nisi dolor consectetur laboris aliqua proident officia. Sunt voluptate fugiat non Lorem amet in est fugiat ullamco sit. Et ea consequat cillum do velit pariatur elit Lorem esse aliqua ut consequat aliqua.\r\nAnim quis do sunt quis exercitation non dolor ut Lorem nostrud et duis do sunt. Nulla anim tempor laboris exercitation ipsum qui cupidatat sit ad. Duis sunt dolor laboris magna dolor quis ex fugiat dolore. Est exercitation et deserunt magna. Eiusmod tempor nulla sunt deserunt in cupidatat velit culpa. Dolor eu labore eiusmod enim deserunt eu proident deserunt. Excepteur duis adipisicing tempor aliquip non eu officia aliquip.\r\n"
     },
@@ -820,7 +870,7 @@
         "relevance": 52,
         "source":
         {
-            "type":  "article"
+            "type":  "directory"
         },
         "content": "Laboris ullamco magna cillum proident sunt. Non aliqua excepteur officia incididunt et sunt ut non aute et. Enim excepteur magna consequat consequat amet velit voluptate nulla proident adipisicing. Cupidatat et sit magna Lorem est occaecat aliqua. Ad proident irure laboris in minim minim et dolore. Id labore ullamco incididunt irure ex commodo anim ad enim magna ea consequat esse. Reprehenderit occaecat Lorem elit mollit aliquip laboris occaecat dolor.\r\nDolor fugiat culpa dolore ad duis est deserunt est excepteur labore. Sit sit anim mollit nisi Lorem officia eiusmod. Tempor anim ipsum officia officia laboris cupidatat. Mollit ex adipisicing do ex anim sit elit commodo ad fugiat dolore Lorem. Excepteur fugiat est pariatur est exercitation deserunt quis officia laboris in ea.\r\n"
     },
@@ -952,7 +1002,13 @@
         "relevance": 57,
         "source":
         {
-            "type":  "email"
+            "type":  "email",
+            "attachment":  "",
+            "from": {"email": "test1@ippon.fr"},
+            "to": [
+              {"email": "test2@ippon.fr"},
+              {"email": "test3@ippon.fr"}
+            ]
         },
         "content": "Pariatur amet magna commodo consectetur elit qui nulla non exercitation anim nulla excepteur minim. Nulla incididunt aliquip ipsum aliqua esse enim nulla tempor incididunt consequat elit. Culpa irure minim eiusmod duis eiusmod tempor ad elit esse. Reprehenderit excepteur dolore qui eu sunt elit aute ex.\r\nDolore ex cupidatat anim nostrud minim exercitation elit magna ad nostrud. Irure mollit aliquip Lorem esse dolore reprehenderit ea laboris laborum sit sint ullamco pariatur. Amet ipsum elit ullamco quis do pariatur consequat sit adipisicing veniam qui sint. Dolore magna ex ipsum laboris non anim veniam do. Incididunt labore fugiat cillum voluptate aute. Ipsum magna exercitation culpa ex. Exercitation dolore minim ipsum quis.\r\n"
     },
@@ -985,7 +1041,12 @@
         "relevance": 41,
         "source":
         {
-            "type":  "contact"
+            "type":  "contact",
+            "lastname": "gdfgdf",
+            "firstname": "jgggghj",
+            "company": "ipponui",
+            "phone": "khkjhkj",
+            "fileowner": "g jh hjg hvh vh v"
         },
         "content": "Dolor occaecat nulla do excepteur reprehenderit. Non sint laboris Lorem culpa. Excepteur ipsum elit ullamco ea eu labore sunt ea. Occaecat mollit aute eiusmod incididunt culpa.\r\nOfficia aute irure excepteur qui amet officia non est labore minim anim. Eu adipisicing est ut ut amet consectetur minim officia in. Deserunt ea dolore excepteur eiusmod.\r\n"
     },
