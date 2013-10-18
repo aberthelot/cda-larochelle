@@ -92,13 +92,17 @@
       <ul>
     </section>
     <section class="col-sm-8">
-      <h1>{{daySelected | date:'MMMM yyyy'}}</h1>
-      <button class="btn btn-primary" ng-click="backwardMonth()">
-        <i class="icon-double-angle-left"></i>
-      </button>
-      <button class="btn btn-primary" ng-click="forwardMonth()">
-        <i class="icon-double-angle-right"></i>
-      </button>
+      <div>
+        <h1>{{daySelected | date:'MMMM yyyy'}}</h1>
+        <div>
+          <button class="btn btn-primary" ng-click="backwardMonth()">
+            <i class="icon-double-angle-left"></i>
+          </button>
+          <button class="btn btn-primary" ng-click="forwardMonth()">
+            <i class="icon-double-angle-right"></i>
+          </button>
+        </div>
+      </div>
       <section class="month">
         <section class="day" dropDay="{{day | date:'yyyy-MM-dd'}}" drop dropStyle="element-drop" ng-repeat="day in daysMonth">
           <time datetime="{{day | date:'yyyy-MM-dd'}}">{{day | date:'dd'}}</time>

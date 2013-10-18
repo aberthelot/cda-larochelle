@@ -111,6 +111,8 @@ ul.list-box {
 }
 
 ul.list-topic {
+  height: 600px;
+  overflow-y: scroll;
   li {
     // background-color: whiteSmoke;
     border: 1px solid gray;
