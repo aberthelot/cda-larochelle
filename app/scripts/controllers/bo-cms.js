@@ -5,17 +5,12 @@ angular.module('cdaLarochelleApp')
   // on récupère les sujets d'actualité
   $scope.topics = Topic.query();
 
-  console.log($scope.topics);
+  // console.log($scope.topics);
 
-  // on récupère la date du jour
-  var now = moment();
-  $scope.now = now.valueOf();
+  // par défaut on sélectionne le jour en cours
+  $scope.daySelected = moment().valueOf();
   // on construit le tableau de jours du mois
-  $scope.daysMonth = new Array();
-  for (var i = 0; i < now.daysInMonth(); i++) {
-    var day = moment().startOf('month').add('days', i);
-    $scope.daysMonth.push(day.valueOf());
-  };
+  buildCalendar();
 
   $rootScope.$on('dropEvent', function(evt, id, day, scheduled) {
 
@@ -57,6 +52,31 @@ angular.module('cdaLarochelleApp')
     $scope.topics[index].isScheduled = false;
     $scope.topics[index].scheduledBegin = "";
     $scope.topics[index].scheduledEnd = "";
+  }
+
+  $scope.backwardMonth = function() {
+    // on recule d'un mois la date en cours
+    $scope.daySelected = moment($scope.daySelected).add('months', -1).valueOf();
+    // on construit le tableau de jours du mois
+    buildCalendar();
+  }
+
+  $scope.forwardMonth = function() {
+    // on avance d'un mois la date en cours
+    $scope.daySelected = moment($scope.daySelected).add('months', 1).valueOf();
+    // on construit le tableau de jours du mois
+    buildCalendar();
+  }
+
+  function buildCalendar() {
+    var daySelected = moment($scope.daySelected);
+    // on construit le tableau de jours du mois
+    var daysMonth = new Array();
+    for (var i = 0; i < daySelected.daysInMonth(); i++) {
+      var day = moment(daySelected).startOf('month').add('days', i);
+      daysMonth.push(day.valueOf());
+    };
+    $scope.daysMonth = daysMonth;
   }
 
 });
