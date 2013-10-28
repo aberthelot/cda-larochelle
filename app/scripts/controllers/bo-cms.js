@@ -14,7 +14,7 @@ angular.module('cdaLarochelleApp')
 
   $rootScope.$on('dropEvent', function(evt, id, day, scheduled) {
 
-    console.log('ID : ' + id + ' ; day : ' + day);
+    // console.log('ID : ' + id + ' ; day : ' + day);
 
     // 
     var topic = getTopicFromList(id, $scope.topics);
@@ -88,43 +88,6 @@ angular.module('cdaLarochelleApp')
     // on construit le tableau de jours du mois
     $scope.daysMonth = buildCalendar($scope.daySelected);
   }
-
-  // function checkCategory(topic, scheduledBegin, scheduledEnd) {
-  //   var categoryError = false;
-  //   // on parcourt toutes les actualités connues
-  //   for (var i = 0; i < $scope.topics.length; i++) {
-      
-  //     // vérifications avec les autres actualités
-  //     if ($scope.topics[i].id != topic.id) {
-  //       // vérifications sur les mêmes catégories
-  //       if ($scope.topics[i].category.id == topic.category.id) {
-
-  //         // console.log("Day : " + moment(day));
-  //         // console.log("Test : " + moment(day));
-
-  //         // on vérifie que la date de début n'appartient pas à la période d'une autre actualité de même catégorie
-  //         if (moment(scheduledBegin).isAfter($scope.topics[i].scheduledBegin) && moment(scheduledBegin).isBefore($scope.topics[i].scheduledEnd)) {
-  //           categoryError = true;
-  //         }
-
-  //         // on vérifie que la date de fin n'appartient pas à la période d'une autre actualité de même catégorie
-  //         if (moment(scheduledEnd).isAfter($scope.topics[i].scheduledBegin) && moment(scheduledEnd).isBefore($scope.topics[i].scheduledEnd)) {
-  //           categoryError = true;
-  //         }
-
-  //         // on vérifie que la période que l'on veut créer n'englobe pas la période d'une autre actualité de même catégorie
-  //         if (moment(scheduledBegin).isBefore($scope.topics[i].scheduledBegin) && moment(scheduledEnd).isAfter($scope.topics[i].scheduledEnd)) {
-  //           categoryError = true;
-  //         }
-  //       }
-  //     }
-  //   }
-
-  //   return categoryError;
-  // }
-
-
-
 })
 //
 .directive('testScope', function() {
@@ -303,15 +266,18 @@ function checkAvailableCategory(topic, day, scheduled, topics) {
       // vérifications avec les autres actualités, de la même catégorie
       if (topics[i].id !== topic.id && topics[i].category.id == topic.category.id) {
         // on vérifie que la date n'appartient pas à la période d'une autre actualité de même catégorie
-        if (moment(day).isAfter(topics[i].scheduledBegin) && moment(day).isBefore(topics[i].scheduledEnd)) {
+        if ((moment(day).isAfter(topics[i].scheduledBegin) || moment(day).isSame(topics[i].scheduledBegin))
+          && (moment(day).isBefore(topics[i].scheduledEnd) || moment(day).isSame(topics[i].scheduledEnd))) {
           check = false;
         }
         // on vérifie que la date de fin n'appartient pas à la période d'une autre actualité de même catégorie
-        if (moment(scheduledEnd).isAfter(topics[i].scheduledBegin) && moment(scheduledEnd).isBefore(topics[i].scheduledEnd)) {
+        if ((moment(scheduledEnd).isAfter(topics[i].scheduledBegin) || moment(scheduledEnd).isSame(topics[i].scheduledBegin))
+          && (moment(scheduledEnd).isBefore(topics[i].scheduledEnd) || moment(scheduledEnd).isSame(topics[i].scheduledEnd))) {
           check = false;
         }
         // on vérifie que la période que l'on veut créer n'englobe pas la période d'une autre actualité de même catégorie
-        if (moment(scheduledBegin).isBefore(topics[i].scheduledBegin) && moment(scheduledEnd).isAfter(topics[i].scheduledEnd)) {
+        if ((moment(scheduledBegin).isBefore(topics[i].scheduledBegin) || moment(scheduledBegin).isSame(topics[i].scheduledBegin))
+          && (moment(scheduledEnd).isAfter(topics[i].scheduledEnd) || moment(scheduledEnd).isSame(topics[i].scheduledEnd))) {
           check = false;
         }
       }
