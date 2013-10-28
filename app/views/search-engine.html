@@ -23,7 +23,9 @@
                 {{source.name}} <!-- - {{source.parameters.length}} -->
               </input>
             </label>
-            <div ng-repeat="parameter in source.parameters">
+            <i class="icon-expand" ng-show="!toggle" ng-click="toggle = !toggle"></i>
+            <i class="icon-collapse" ng-show="toggle" ng-click="toggle = !toggle"></i>
+            <div ng-show="toggle" ng-repeat="parameter in source.parameters">
               <label>
                 {{parameter.label}}
                 <input type="{{parameter.type}}" ng-model="parameter.value"></input>
