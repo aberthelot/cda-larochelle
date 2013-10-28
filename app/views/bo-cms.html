@@ -1,5 +1,12 @@
+<!-- 
+    <div ng-controller="BoCmsCtrl">
+      <div test-scope></div>
+    </div> -->
 
-<section class="">
+
+
+
+<section ng-controller="BoCmsCtrl" class="">
   <div class="row">
     <section class="col-sm-4">
       <div class="well well-complementary">
@@ -104,8 +111,9 @@
         </div>
       </div>
       <section class="month">
-        <section class="day" dropDay="{{day | date:'yyyy-MM-dd'}}" drop dropStyle="element-drop" ng-repeat="day in daysMonth">
-          <time datetime="{{day | date:'yyyy-MM-dd'}}">{{day | date:'dd'}}</time>
+        <!-- <section class="day" ng-repeat="day in daysMonth" drop dropStyle="element-drop" topics="topics"> -->
+        <section class="day" ng-repeat="day in daysMonth" drop dropStyle="element-drop" topics="topics">
+        <time datetime="{{day | date:'yyyy-MM-dd'}}">{{day | date:'dd'}}</time>
           <article class="category-{{topic.category.id}}" ng-repeat="topic in topics | scheduled:(day)"
             data-id="{{topic.id}}" data-category-id="{{topic.category.id}}">
             <p>

@@ -74,6 +74,11 @@ body {
   }
 }
 
+// .youpi {
+//   height: 200px;
+//   width: 20%;
+// }
+
 .element-drag {
   @include element-drag($topic-drag-shadow-color);
 }
