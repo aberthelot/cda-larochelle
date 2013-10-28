@@ -98,40 +98,24 @@
         <input type="text" ng-model="texttosearch" class="form-control" placeholder="Rechercher ..." autofocus>
       </form>
       <hr/>
+      <!-- Groupement par source -->
       <section ng-repeat="source in sources | sourceSelectedFilter" ng-show="group == 'source'">
         <h4>
           <i class="{{source.name | iconFilter:sources}}"></i>
-          {{source.name}} - {{(documents | groupFilter:source.name).length}} résultat(s)
+          {{source.name}} - {{(documents | groupFilter:source).length}} résultat(s)
         </h4>
         <ul class="list-unstyled list-document list-box">
-          <li ng-repeat="document in documents | groupFilter:source.name | filter:texttosearch | orderBy:sort:!reverse" class="list {{display}}">
-            <p>
-              <i class="{{document.source.type | iconFilter:sources}}"></i>
-              <span ng-bind-html-unsafe="document.title | highlight:texttosearch"></span>
-            </p>
-            <p>
-              <date ng-bind-html-unsafe="document.created | date:'shortDate' | highlight:texttosearch"></date>
-              -
-              <span ng-bind-html-unsafe="document.relevance | highlight:texttosearch"></span>
-            </p>
-            <p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>
+          <li ng-repeat="document in documents | groupFilter:source | filter:texttosearch | orderBy:sort:!reverse" class="list {{display}}">
+            <div my-source></div>
           </li>
         </ul>
       </section>
+      <!-- Tout type de source -->
       <section ng-show="group == 'global'">
-        <!-- <h4>{{(documents | sourceFilter:sources | filter:texttosearch).length}} résultat(s)</h4> -->
+        <h4>{{(documents | sourceFilter:sources | filter:texttosearch).length}} résultat(s)</h4>
         <ul class="list-unstyled list-document">
           <li ng-repeat="document in documents | sourceFilter:sources | filter:texttosearch | orderBy:sort:!reverse" class="list {{display}}">
-            <p>
-              <i class="{{document.source.type | iconFilter:sources}}"></i>
-              <span ng-bind-html-unsafe="document.title | highlight:texttosearch"></span>
-            </p>
-            <p>
-              <date ng-bind-html-unsafe="document.created | date:'shortDate' | highlight:texttosearch"></date>
-              -
-              <span ng-bind-html-unsafe="document.relevance | highlight:texttosearch"></span>
-            </p>
-            <p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>
+            <div my-source></div>
           </li>
         </ul>
       </section>

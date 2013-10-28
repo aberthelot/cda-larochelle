@@ -1,0 +1,10 @@
+<p>
+  <i class="{{document.source.type | iconFilter:sources}}"></i>
+  <span ng-bind-html-unsafe="document.title | highlight:texttosearch"></span>
+</p>
+<p>
+  <date ng-bind-html-unsafe="document.created | date:'shortDate' | highlight:texttosearch"></date>
+  -
+  <span ng-bind-html-unsafe="document.relevance | highlight:texttosearch"></span>
+</p>
+<p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>

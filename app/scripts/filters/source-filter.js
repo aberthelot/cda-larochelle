@@ -1,6 +1,48 @@
 'use strict';
 
 angular.module('cdaLarochelleApp')
+  .filter('groupFilter', function () {
+    return function (items, source) {
+
+      var arrayToReturn = [];
+      for (var i=0; i<items.length; i++) {
+        if (source.name == items[i].source.type) {
+
+            var item = items[i];
+            var parametersSource = source.parameters;
+
+            var dismatch = false;
+
+            for (var k = 0; k < parametersSource.length; k++) {
+              //
+              var parameter = parametersSource[k];
+              // parametersSource[k]
+              // console.log(parameter.label);
+
+              // console.log('Model : ' + parameter.model);
+              // console.log('ID : ' + item.id);
+              // console.log('parameter.value : ' + parameter.value + ' =?= item.source[parameter.model] ' + item.source[parameter.model]);
+              dismatch = dismatch || checkMulti(parameter.model, parameter.value, item.source);
+              // console.log('dismatch : ' + dismatch);
+
+            };
+
+            if (!dismatch) {
+              arrayToReturn.push(item);
+            }
+
+
+
+          // arrayToReturn.push(items[i]);
+        }
+      }
+      // console.log(arrayToReturn.length + ' result(s) found');
+
+      return arrayToReturn;
+    };
+  });
+
+angular.module('cdaLarochelleApp')
   .filter('sourceFilter', function () {
     return function (items, sources) {
 
