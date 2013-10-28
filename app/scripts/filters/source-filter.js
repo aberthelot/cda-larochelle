@@ -4,6 +4,7 @@ angular.module('cdaLarochelleApp')
   .filter('sourceFilter', function () {
     return function (items, sources) {
 
+      // on récupère les sources sur lesquelles on veut filtrer
       var selectedSources = [];
       for (var i = 0; i < sources.length; i++) {
         if (sources[i].selected) {
@@ -11,16 +12,12 @@ angular.module('cdaLarochelleApp')
         }
       }
 
-
-
       var arrayToReturn = [];
       // on parcourt les items à filtrer
       for (var i = 0; i < items.length; i++) {
         var item = items[i];
         // console.log('ID item : ' + item.id);
-
         // console.log('Nb sources : ' + selectedSources.length);
-
         for (var j = 0; j < selectedSources.length; j++) {
           var selectedSource = selectedSources[j];
           // console.log('Test source : ' + selectedSources[j].name +
@@ -40,22 +37,9 @@ angular.module('cdaLarochelleApp')
               // console.log('Model : ' + parameter.model);
               // console.log('ID : ' + item.id);
               // console.log('parameter.value : ' + parameter.value + ' =?= item.source[parameter.model] ' + item.source[parameter.model]);
+              dismatch = dismatch || checkMulti(parameter.model, parameter.value, item.source);
+              // console.log('dismatch : ' + dismatch);
 
-
-              // if (parameter.model.indexOf('[]') != -1) {
-
-              //   for (var l = 0; l < Thlngs.length; l++) {
-              //     Thlngs[l]
-              //   };
-
-
-
-                // var tab = parameter.model.split('[]');
-
-                dismatch = checkMulti(parameter.model, parameter.value, item.source);
-
-
-              
             };
 
             if (!dismatch) {
@@ -78,7 +62,7 @@ function checkMulti(parameterModel, parameterValue, itemSource) {
 
   var dismatch = false;
 
-  console.log('Parameter model : ' + parameterModel);
+  // console.log('Parameter model : ' + parameterModel);
 
   var itemValue = '';
   if (parameterModel.indexOf('.') != -1) {
@@ -116,6 +100,9 @@ function checkMulti(parameterModel, parameterValue, itemSource) {
     // itemValue = itemSource[split[0]][split[1]];
   } else {
     itemValue = itemSource[parameterModel];
+    if (checkMatchingText(parameterValue, itemValue)) {
+      dismatch = true;
+    }
   }
 
   return dismatch;
@@ -128,6 +115,6 @@ function checkMatchingText(parameterValue, itemValue) {
   if (parameterValue !== '' && itemValue.indexOf(parameterValue) == -1) {
     dismatch = true;
   }
-
+  // console.log('checkMatchingText(' + parameterValue + ', ' + itemValue + ') : ' + dismatch)
   return dismatch;
 }

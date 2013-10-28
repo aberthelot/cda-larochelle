@@ -20,7 +20,7 @@
             <label>
               <input type="checkbox" ng-model="source.selected">
                 <i class="{{source.icon}}"></i>
-                {{source.name}} - {{source.parameters.length}}
+                {{source.name}} <!-- - {{source.parameters.length}} -->
               </input>
             </label>
             <div ng-repeat="parameter in source.parameters">

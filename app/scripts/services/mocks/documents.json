@@ -118,10 +118,10 @@
         {
             "type":  "email",
             "attachment":  "",
-            "from": {"email": "test1@ippon.fr"},
+            "from": {"email": "test11@ippon.fr"},
             "to": [
               {"email": "test2@ippon.fr"},
-              {"email": "test3@ippon.fr"}
+              {"email": "test4@ippon.fr"}
             ]
         },
         "content": "Minim duis amet ullamco adipisicing tempor ea dolore. Ullamco aliquip labore id ex nostrud sunt. Veniam ut laboris commodo laborum veniam sunt laborum laborum aute fugiat pariatur sunt magna occaecat. Elit dolor mollit consequat id sit fugiat proident consectetur id reprehenderit. Consequat officia incididunt id enim velit sint. Ullamco nostrud reprehenderit velit ullamco cillum aliquip excepteur ullamco et nisi minim non in.\r\nIpsum pariatur incididunt nostrud sint exercitation nulla fugiat dolor velit occaecat deserunt. Laboris ullamco consequat in ipsum sint est minim commodo. Dolor culpa ipsum elit est esse occaecat minim esse enim minim.\r\n"
@@ -603,7 +603,7 @@
             "attachment":  "",
             "from": {"email": "test1@ippon.fr"},
             "to": [
-              {"email": "test2@ippon.fr"},
+              {"email": "test4@ippon.fr"},
               {"email": "test3@ippon.fr"}
             ]
         },
