@@ -375,7 +375,32 @@
         "relevance": 86,
         "source":
         {
-            "type":  "meet"
+            "type":  "meet",
+            "created": "1988-04-06T14:06:07",
+            "organizers": [
+              {
+                "firstname": "Jean",
+                "lastname": "Dupont",
+                "email": "jdupont@ippon.fr"
+              },
+              {
+                "firstname": "Marc",
+                "lastname": "Dubois",
+                "email": "mdubois@ippon.fr"
+              }
+            ],
+            "contributors": [
+              {
+                "firstname": "Céline",
+                "lastname": "Durand",
+                "email": "cdurand@ippon.fr"
+              },
+              {
+                "firstname": "Nathalie",
+                "lastname": "Dumin",
+                "email": "ndumin@ippon.fr"
+              }
+            ]
         },
         "content": "Ut ea id amet anim ea. Nulla enim elit laboris sit voluptate. Aliquip labore voluptate dolor velit sunt. Laborum quis labore consequat ullamco. Cupidatat culpa occaecat proident fugiat non magna et esse nisi magna magna anim.\r\nDeserunt culpa occaecat proident aliqua ea fugiat excepteur mollit velit duis. Esse in mollit qui elit mollit adipisicing velit adipisicing elit culpa id adipisicing. Qui non consectetur irure quis duis duis excepteur nulla laboris amet nulla.\r\n"
     },
@@ -408,7 +433,32 @@
         "relevance": 46,
         "source":
         {
-            "type":  "meet"
+            "type":  "meet",
+            "created": "1988-04-06T14:06:07",
+            "organizers": [
+              {
+                "firstname": "Jean",
+                "lastname": "Dupont",
+                "email": "jdupont@ippon.fr"
+              },
+              {
+                "firstname": "Marc",
+                "lastname": "Dubois",
+                "email": "mdubois@ippon.fr"
+              }
+            ],
+            "contributors": [
+              {
+                "firstname": "Céline",
+                "lastname": "Durand",
+                "email": "cdurand@ippon.fr"
+              },
+              {
+                "firstname": "Nathalie",
+                "lastname": "Dumin",
+                "email": "ndumin@ippon.fr"
+              }
+            ]
         },
         "content": "Velit quis laboris et ex commodo amet aliquip eu. Est esse amet irure dolor ea nisi elit cillum commodo do magna. Quis nostrud occaecat nulla culpa exercitation ex qui ea consectetur eu sunt reprehenderit. Ex eu aute pariatur aliquip. Adipisicing fugiat proident qui occaecat minim magna eiusmod dolore voluptate est consequat dolor officia in.\r\nReprehenderit nulla voluptate magna laboris deserunt excepteur aliqua incididunt deserunt fugiat nisi magna. Anim duis magna exercitation aute reprehenderit enim. Ullamco pariatur cupidatat nisi dolore amet elit amet adipisicing aute proident exercitation mollit. Sunt velit duis ad duis id minim ad voluptate enim irure quis.\r\n"
     },
@@ -419,7 +469,32 @@
         "relevance": 18,
         "source":
         {
-            "type":  "meet"
+            "type":  "meet",
+            "created": "1988-04-06T14:06:07",
+            "organizers": [
+              {
+                "firstname": "Jean",
+                "lastname": "Dupont",
+                "email": "jdupont@ippon.fr"
+              },
+              {
+                "firstname": "Marc",
+                "lastname": "Dubois",
+                "email": "mdubois@ippon.fr"
+              }
+            ],
+            "contributors": [
+              {
+                "firstname": "Céline",
+                "lastname": "Durand",
+                "email": "cdurand@ippon.fr"
+              },
+              {
+                "firstname": "Nathalie",
+                "lastname": "Dumin",
+                "email": "ndumin@ippon.fr"
+              }
+            ]
         },
         "content": "Esse excepteur dolore id anim aute consequat. Aute excepteur ullamco sint id Lorem nostrud esse laboris sint nostrud. Ut aliqua sit et anim fugiat ex ea Lorem aliquip consectetur esse cillum fugiat nulla. Exercitation qui incididunt fugiat non ullamco qui et velit est. In sint deserunt qui consectetur ipsum velit cillum exercitation Lorem et.\r\nIpsum voluptate laborum et irure dolor enim non culpa magna sint cupidatat laborum ex incididunt. Consectetur enim laboris dolor voluptate in consequat et nostrud. Veniam ex quis non minim enim do tempor fugiat ad excepteur voluptate. Est ipsum Lorem ipsum ut sit duis sit mollit dolore voluptate mollit excepteur laboris. Laborum mollit velit aliqua pariatur laboris eu enim. Non consectetur labore excepteur consectetur.\r\n"
     },
@@ -430,7 +505,32 @@
         "relevance": 13,
         "source":
         {
-            "type":  "meet"
+            "type":  "meet",
+            "created": "1988-04-06T14:06:07",
+            "organizers": [
+              {
+                "firstname": "Jean",
+                "lastname": "Dupont",
+                "email": "jdupont@ippon.fr"
+              },
+              {
+                "firstname": "Marc",
+                "lastname": "Dubois",
+                "email": "mdubois@ippon.fr"
+              }
+            ],
+            "contributors": [
+              {
+                "firstname": "Céline",
+                "lastname": "Durand",
+                "email": "cdurand@ippon.fr"
+              },
+              {
+                "firstname": "Nathalie",
+                "lastname": "Dumin",
+                "email": "ndumin@ippon.fr"
+              }
+            ]
         },
         "content": "Nulla voluptate eiusmod in proident qui nulla mollit et cillum. Ut ut sint sit elit nisi reprehenderit consectetur aliqua aute laboris proident incididunt amet labore. Veniam laborum quis proident mollit dolor nulla laborum quis enim exercitation ullamco labore. Enim nostrud commodo velit excepteur ad. Occaecat dolor exercitation quis dolor aliqua anim reprehenderit. Ullamco nisi est qui ullamco enim irure in mollit irure culpa sunt consectetur incididunt occaecat.\r\nConsectetur anim mollit eu id enim tempor ut ullamco dolore laborum tempor culpa labore. Reprehenderit do ut ipsum officia magna consequat ad tempor quis ex. Dolor cupidatat dolor anim deserunt sint in et non minim. Do aliqua minim qui ex tempor sunt reprehenderit exercitation. Lorem fugiat sint laborum dolore. Velit deserunt enim officia fugiat ad excepteur elit non aliquip adipisicing sint sit officia.\r\n"
     },
@@ -441,7 +541,32 @@
         "relevance": 69,
         "source":
         {
-            "type":  "meet"
+            "type":  "meet",
+            "created": "1988-04-06T14:06:07",
+            "organizers": [
+              {
+                "firstname": "Nathalie",
+                "lastname": "Dumin",
+                "email": "ndumin@ippon.fr"
+              },
+              {
+                "firstname": "Marc",
+                "lastname": "Dubois",
+                "email": "mdubois@ippon.fr"
+              }
+            ],
+            "contributors": [
+              {
+                "firstname": "Céline",
+                "lastname": "Durand",
+                "email": "cdurand@ippon.fr"
+              },
+              {
+                "firstname": "Jean",
+                "lastname": "Dupont",
+                "email": "jdupont@ippon.fr"
+              }
+            ]
         },
         "content": "Ullamco sit fugiat do non fugiat deserunt id duis. Ipsum non aute anim incididunt reprehenderit minim do ex qui nostrud consectetur nulla dolor amet. Quis amet incididunt nostrud non do officia amet id eu culpa aliquip. Ea et consectetur reprehenderit ullamco ad ullamco ex.\r\nEst Lorem pariatur aliqua ad proident sit non excepteur ad proident eu deserunt irure. Sint aliqua minim veniam non. Velit cillum non duis velit. Reprehenderit est amet in laborum eu dolor exercitation velit veniam. Reprehenderit reprehenderit laboris sit anim aliqua.\r\n"
     },
@@ -1101,7 +1226,32 @@
         "relevance": 5,
         "source":
         {
-            "type":  "meet"
+            "type":  "meet",
+            "created": "1988-04-06T14:06:07",
+            "organizers": [
+              {
+                "firstname": "Jean",
+                "lastname": "Dupont",
+                "email": "jdupont@ippon.fr"
+              },
+              {
+                "firstname": "Marc",
+                "lastname": "Dubois",
+                "email": "mdubois@ippon.fr"
+              }
+            ],
+            "contributors": [
+              {
+                "firstname": "Céline",
+                "lastname": "Durand",
+                "email": "cdurand@ippon.fr"
+              },
+              {
+                "firstname": "Nathalie",
+                "lastname": "Dumin",
+                "email": "ndumin@ippon.fr"
+              }
+            ]
         },
         "content": "Non cupidatat minim qui id. Nostrud consequat dolore elit veniam irure labore id ipsum tempor dolor culpa dolore ipsum adipisicing. Dolor eiusmod nulla exercitation excepteur eu nostrud qui cillum officia eu culpa adipisicing.\r\nNostrud incididunt Lorem adipisicing sint ad incididunt nulla proident ut sit. Duis cillum exercitation excepteur aliqua sit sint amet dolore fugiat sunt reprehenderit ex fugiat ea. Ea officia consectetur aliquip quis et id.\r\n"
     },

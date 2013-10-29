@@ -23,6 +23,7 @@ angular.module('cdaLarochelleApp')
   $scope.sources = [
     {
       "name" : "email",
+      "label" : "Emails",
       "selected" : true,
       "icon" : "icon-envelope",
       "parameters" : [
@@ -42,6 +43,7 @@ angular.module('cdaLarochelleApp')
     },
     {
       "name" : "contact",
+      "label" : "Contacts",
       "selected" : false,
       "icon" : "icon-user",
       "parameters" : [
@@ -56,54 +58,76 @@ angular.module('cdaLarochelleApp')
     },
     {
       "name" : "meet",
+      "label" : "Rendez-vous",
       "selected" : false,
       "icon" : "icon-calendar",
-      "parameters" : []
+      "parameters" : [
+        {
+          "label" : "Organisateur",
+          "type" : "text",
+          "model" : "organizers.lastname",
+          "value" : ""
+        },
+        {
+          "label" : "Participants",
+          "type" : "text",
+          "model" : "contributors.lastname",
+          "value" : ""
+        }
+      ]
     },
     {
       "name" : "todo",
+      "label" : "Tâches Exchange",
       "selected" : false,
       "icon" : "icon-edit",
       "parameters" : []
     },
         {
       "name" : "layout",
+      "label" : "Pages (layouts)",
       "selected" : false,
       "icon" : "icon-columns",
       "parameters" : []
     },
     {
       "name" : "article",
+      "label" : "Articles",
       "selected" : false,
       "icon" : "icon-align-left",
       "parameters" : []
     },
     {
       "name" : "topic",
+      "label" : "Actualités",
       "selected" : false,
       "icon" : "icon-file-text-alt",
       "parameters" : []
     },
     {
       "name" : "application",
+      "label" : "Les applications",
       "selected" : false,
       "icon" : "icon-dashboard",
       "parameters" : []
     },
     {
       "name" : "rss",
+      "label" : "Les flux RSS",
       "selected" : false,
       "icon" : "icon-rss",
       "parameters" : []
     },
     {
       "name" : "library",
+      "label" : "Documents Alfresco",
       "selected" : false,
       "icon" : "icon-folder-open-alt",
       "parameters" : []
     },
     {
       "name" : "directory",
+      "label" : "L'annuaire",
       "selected" : false,
       "icon" : "icon-group",
       "parameters" : []
