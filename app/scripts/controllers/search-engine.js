@@ -51,13 +51,6 @@ $scope.daySelected = moment().valueOf();
     }
   ];
 
-  // $scope.testemail = '';
-  $scope.testemail = $scope.periods[0];
-
-    $scope.$watch('testemail', function() {
-        // $scope.searchCity = null;
-    });
-
   $scope.sources = [
     {
       "name" : "email",
@@ -81,7 +74,7 @@ $scope.daySelected = moment().valueOf();
           "label" : "Date de réception",
           "type" : "selectdate",
           "model" : "datereception",
-          "value" : $scope.periods[2]
+          "value" : $scope.periods[0]
         }
       ]
     },
@@ -117,6 +110,12 @@ $scope.daySelected = moment().valueOf();
           "type" : "text",
           "model" : "contributors.lastname",
           "value" : ""
+        },
+        {
+          "label" : "Date du rendez-vous",
+          "type" : "selectdate",
+          "model" : "datemeeting",
+          "value" : $scope.periods[0]
         }
       ]
     },

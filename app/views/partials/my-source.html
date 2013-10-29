@@ -19,12 +19,16 @@
   <p>
     <i class="{{document.source.type | iconFilter:sources}}"></i>
     <span ng-bind-html-unsafe="document.title | highlight:texttosearch"></span>
-    <span ng-show="document.source.attachment != ''">
-      <i class="icon-paper-clip"></i>
-      {{document.source.attachment}}
-    </span>
+  </p>
+  <p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>
+</div>
+<!-- spécialisation pour les rendez-vous -->
+<div ng-show="document.source.type == 'meet'">
+  <p>
+    <i class="{{document.source.type | iconFilter:sources}}"></i>
+    <span ng-bind-html-unsafe="document.title | highlight:texttosearch"></span>
     <span class="pull-right">
-      <date ng-bind-html-unsafe="document.source.datereception | date:'shortDate' | highlight:texttosearch"></date>
+      <date ng-bind-html-unsafe="document.source.datemeeting | date:'shortDate' | highlight:texttosearch"></date>
     </span>
   </p>
   <p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>
