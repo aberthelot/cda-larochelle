@@ -81,7 +81,7 @@ $scope.daySelected = moment().valueOf();
           "label" : "Date de réception",
           "type" : "selectdate",
           "model" : "datereception",
-          "value" : ""
+          "value" : $scope.periods[2]
         }
       ]
     },

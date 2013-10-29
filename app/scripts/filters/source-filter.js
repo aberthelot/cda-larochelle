@@ -57,19 +57,44 @@ function checkItemWithParameters(item, parametersSource) {
   var check = true;
   // on parcourt sur les paramètres de la source
   for (var k = 0; k < parametersSource.length; k++) {
-    //
+    // on récupère le paramètre que l'on souhaite tester
     var parameter = parametersSource[k];
-    // parametersSource[k]
-    // console.log(parameter.label);
-
-    // console.log('Model : ' + parameter.model);
-    // console.log('ID : ' + item.id);
-    // console.log('parameter.value : ' + parameter.value + ' =?= item.source[parameter.model] ' + item.source[parameter.model]);
-    check = check && checkMultiMatchingText(parameter.model, parameter.value, item.source);
-    // console.log('check : ' + check);
-
+    if ('text' == parameter.type) {
+      check = check && checkMultiMatchingText(parameter.model, parameter.value, item.source);
+    } else if ('selectdate' == parameter.type) {
+      // console.log('cou');
+      check = check && checkMatchingDate(parameter.model, parameter.value, item.source);
+    }
   };
+  // console.log('checkItemWithParameters(' + item + ', ' + parametersSource + ') : ' + check);
   return check
+}
+
+function checkMatchingDate(dateChoosen, period, itemSource) {
+
+  var checkBegin = true;
+  var checkEnd = true;
+
+  // on vérifie que la date souhaitée de l'item n'est pas avant le début de la période de recherche
+  if ('' != period.dateSearchBegin
+    && moment(itemSource[dateChoosen]).startOf('day')
+    .isBefore(moment(period.dateSearchBegin).startOf('day'))) {
+    checkBegin = false;
+  }
+  // on vérifie que la date souhaitée de l'item n'est pas après la fin de la période de recherche
+  if ('' != period.dateSearchEnd
+    && moment(itemSource[dateChoosen]).startOf('day')
+    .isAfter(moment(period.dateSearchEnd).startOf('day'))) {
+    checkEnd = false;
+  }
+
+  // console.log('checkMatchingDate('
+  //  + 'dateChoosen : ' + dateChoosen
+  //  + ', period : ' + period
+  //  + ', itemSource : ' + itemSource
+  //  + ') : ' + checkBegin + '&&' + checkEnd);
+
+  return checkBegin && checkEnd;
 }
 
 function checkMultiMatchingText(parameterModel, parameterValue, itemSource) {
@@ -125,6 +150,6 @@ function checkMatchingText(parameterValue, itemValue) {
   if (parameterValue !== '' && itemValue.indexOf(parameterValue) == -1) {
     check = false;
   }
-  // console.log('checkMatchingText(' + parameterValue + ', ' + itemValue + ') : ' + check)
+  // console.log('checkMatchingText(' + parameterValue + ', ' + itemValue + ') : ' + check);
   return check;
 }
