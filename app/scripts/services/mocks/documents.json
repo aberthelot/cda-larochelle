@@ -50,13 +50,14 @@
     },
     {
         "id": 4,
-        "title": "incididunt ex officia commodo fugiat sit consectetur irure minim sit",
+        "title": "/Projets communauté/Rendez-vous COPIL ICAR",
         "created": "2013-10-28T18:21:21",
         "relevance": 0,
         "source":
         {
             "type":  "email",
             "attachment":  "plan-cda.pdf",
+            "datereception" : "2013-10-28T18:21:21+01:00",
             "from": {"email": "test1@ippon.fr"},
             "to": [
               {"email": "test2@ippon.fr"},
@@ -118,6 +119,7 @@
         {
             "type":  "email",
             "attachment":  "",
+            "datereception" : "2013-10-28T18:21:21+01:00",
             "from": {"email": "test11@ippon.fr"},
             "to": [
               {"email": "test2@ippon.fr"},
@@ -726,6 +728,7 @@
         {
             "type":  "email",
             "attachment":  "",
+            "datereception" : "2013-10-28T18:21:21+01:00",
             "from": {"email": "test1@ippon.fr"},
             "to": [
               {"email": "test4@ippon.fr"},
@@ -886,6 +889,7 @@
         {
             "type":  "email",
             "attachment":  "",
+            "datereception" : "2013-10-28T18:21:21+01:00",
             "from": {"email": "test1@ippon.fr"},
             "to": [
               {"email": "test2@ippon.fr"},
@@ -958,6 +962,7 @@
         {
             "type":  "email",
             "attachment":  "",
+            "datereception" : "2013-10-28T18:21:21+01:00",
             "from": {"email": "test1@ippon.fr"},
             "to": [
               {"email": "test2@ippon.fr"},
@@ -1129,6 +1134,7 @@
         {
             "type":  "email",
             "attachment":  "",
+            "datereception" : "2013-10-28T18:21:21+01:00",
             "from": {"email": "test1@ippon.fr"},
             "to": [
               {"email": "test2@ippon.fr"},

@@ -3,7 +3,7 @@
   <div class="row">
     <section class="col-sm-4">
       <div class="well well-complementary">
-        <h4>Source de la recherche</h4>
+        <h4>Sources de la recherche</h4>
         <form name="sourceForm" class="form-horizontal">
           <div ng-repeat="source in sources" class="checkbox" dragsource data-index="{{$index}}">
             <div class="dropzone" dropsource dropStyle="element-drop" data-index="{{$index}}" ng-show="dropavailable">
@@ -12,17 +12,14 @@
             <label>
               <input type="checkbox" ng-model="source.selected">
                 <i class="{{source.icon}}"></i>
-                {{source.label}} <!-- - {{source.parameters.length}} -->
+                {{source.label}}
               </input>
             </label>
             <i class="icon-expand" ng-show="!toggle" ng-click="toggle = !toggle"></i>
             <i class="icon-collapse" ng-show="toggle" ng-click="toggle = !toggle"></i>
             <div ng-show="toggle">
               <div ng-repeat="parameter in source.parameters">
-                <label>
-                  {{parameter.label}}
-                  <input type="{{parameter.field.type}}" ng-model="parameter.value"></input>
-                </label>
+                <div my-field-search></div>
               </div>
             </div>
           </div>
@@ -124,7 +121,7 @@
           {{source.name}} - {{(documents | groupFilter:source | periodFilter:testemail | filter:texttosearch).length}} résultat(s)
         </h4>
         <ul class="list-unstyled list-document list-box">
-          <li ng-repeat="document in documents | groupFilter:source | periodFilter:testemail | filter:texttosearch | orderBy:sort:!reverse" class="list {{display}}">
+          <li ng-repeat="document in documents | groupFilter:source | filter:texttosearch | orderBy:sort:!reverse" class="list {{display}}">
             <div my-source></div>
           </li>
         </ul>
@@ -133,7 +130,7 @@
       <section ng-show="group == 'global'">
         <h4>{{(documents | sourceFilter:sources | periodFilter:testemail | filter:texttosearch).length}} résultat(s)</h4>
         <ul class="list-unstyled list-document">
-          <li ng-repeat="document in documents | sourceFilter:sources | periodFilter:testemail | filter:texttosearch | orderBy:sort:!reverse" class="list {{display}}">
+          <li ng-repeat="document in documents | sourceFilter:sources | filter:texttosearch | orderBy:sort:!reverse" class="list {{display}}">
             <div my-source></div>
           </li>
         </ul>

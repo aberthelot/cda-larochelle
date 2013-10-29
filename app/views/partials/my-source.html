@@ -1,0 +1,31 @@
+
+<!-- spécialisation pour les emails -->
+<div ng-show="document.source.type == 'email'">
+  <p>
+    <i class="{{document.source.type | iconFilter:sources}}"></i>
+    <span ng-bind-html-unsafe="document.title | highlight:texttosearch"></span>
+    <span ng-show="document.source.attachment != ''">
+      <i class="icon-paper-clip"></i>
+      {{document.source.attachment}}
+    </span>
+    <span class="pull-right">
+      <date ng-bind-html-unsafe="document.source.datereception | date:'shortDate' | highlight:texttosearch"></date>
+    </span>
+  </p>
+  <p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>
+</div>
+<!-- spécialisation pour les contacts -->
+<div ng-show="document.source.type == 'contact'">
+  <p>
+    <i class="{{document.source.type | iconFilter:sources}}"></i>
+    <span ng-bind-html-unsafe="document.title | highlight:texttosearch"></span>
+    <span ng-show="document.source.attachment != ''">
+      <i class="icon-paper-clip"></i>
+      {{document.source.attachment}}
+    </span>
+    <span class="pull-right">
+      <date ng-bind-html-unsafe="document.source.datereception | date:'shortDate' | highlight:texttosearch"></date>
+    </span>
+  </p>
+  <p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>
+</div>

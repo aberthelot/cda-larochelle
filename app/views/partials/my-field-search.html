@@ -1,0 +1,10 @@
+<label>
+  {{parameter.label}}
+  <div ng-show="parameter.type == 'text'">
+    <input type="{{parameter.type}}" ng-model="parameter.value"></input>
+  </div>
+  <div ng-show="parameter.type == 'selectdate'">
+    <select class="form-control" ng-model="parameter.value" ng-options="period.label for period in periods">
+    </select>
+  </div>
+</label>

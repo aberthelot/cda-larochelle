@@ -76,6 +76,12 @@ $scope.daySelected = moment().valueOf();
           "type" : "text",
           "model" : "to.email",
           "value" : ""
+        },
+        {
+          "label" : "Date de réception",
+          "type" : "selectdate",
+          "model" : "datereception",
+          "value" : ""
         }
       ]
     },
