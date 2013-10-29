@@ -56,7 +56,7 @@
         "source":
         {
             "type":  "email",
-            "attachment":  "",
+            "attachment":  "plan-cda.pdf",
             "from": {"email": "test1@ippon.fr"},
             "to": [
               {"email": "test2@ippon.fr"},

@@ -174,6 +174,12 @@ $scope.daySelected = moment().valueOf();
 
   $scope.deselectall = function() {
     for (var i = 0; i < $scope.sources.length; i++) {
+      $scope.sources[i].selected = false;
+    }
+  }
+
+  $scope.selectall = function() {
+    for (var i = 0; i < $scope.sources.length; i++) {
       $scope.sources[i].selected = true;
     }
   }
