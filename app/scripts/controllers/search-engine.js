@@ -6,9 +6,11 @@ angular.module('cdaLarochelleApp')
   $scope.documents = Document.query();
 
   $scope.display = 'display-list';
-  $scope.group = 'global';
+  $scope.group = 'source';
   $scope.sort = 'relevance';
   $scope.dropavailable = false;
+
+$scope.daySelected = moment().valueOf();
 
   $rootScope.$on('moveSource', function(evt, indexBegin, indexEnd) {
     // console.log('SearchEngineCtrl receive \'moveSource\' with parameters indexBegin : ' + indexBegin + ' | indexEnd ' + indexEnd);
@@ -19,6 +21,42 @@ angular.module('cdaLarochelleApp')
 
     $scope.$apply();
   });
+
+
+  $scope.periods = [
+    {
+      label: '--',
+      dateSearchBegin: '',
+      dateSearchEnd: ''
+    },
+    {
+      label: 'Aujourd\'hui',
+      dateSearchBegin: moment().valueOf(),
+      dateSearchEnd: moment().valueOf()
+    },
+    {
+      label: 'Cette semaine',
+      dateSearchBegin: moment().startOf('week').valueOf(),
+      dateSearchEnd: moment().endOf('week').valueOf()
+    },
+    {
+      label: 'Ce mois-ci',
+      dateSearchBegin: moment().startOf('month').valueOf(),
+      dateSearchEnd: moment().endOf('month').valueOf()
+    },
+    {
+      label: 'A venir',
+      dateSearchBegin: moment().valueOf(),
+      dateSearchEnd: ''
+    }
+  ];
+
+  // $scope.testemail = '';
+  $scope.testemail = $scope.periods[0];
+
+    $scope.$watch('testemail', function() {
+        // $scope.searchCity = null;
+    });
 
   $scope.sources = [
     {
@@ -44,7 +82,7 @@ angular.module('cdaLarochelleApp')
     {
       "name" : "contact",
       "label" : "Contacts",
-      "selected" : false,
+      "selected" : true,
       "icon" : "icon-user",
       "parameters" : [
         {
@@ -59,7 +97,7 @@ angular.module('cdaLarochelleApp')
     {
       "name" : "meet",
       "label" : "Rendez-vous",
-      "selected" : false,
+      "selected" : true,
       "icon" : "icon-calendar",
       "parameters" : [
         {
@@ -79,56 +117,56 @@ angular.module('cdaLarochelleApp')
     {
       "name" : "todo",
       "label" : "Tâches Exchange",
-      "selected" : false,
+      "selected" : true,
       "icon" : "icon-edit",
       "parameters" : []
     },
         {
       "name" : "layout",
       "label" : "Pages (layouts)",
-      "selected" : false,
+      "selected" : true,
       "icon" : "icon-columns",
       "parameters" : []
     },
     {
       "name" : "article",
       "label" : "Articles",
-      "selected" : false,
+      "selected" : true,
       "icon" : "icon-align-left",
       "parameters" : []
     },
     {
       "name" : "topic",
       "label" : "Actualités",
-      "selected" : false,
+      "selected" : true,
       "icon" : "icon-file-text-alt",
       "parameters" : []
     },
     {
       "name" : "application",
       "label" : "Les applications",
-      "selected" : false,
+      "selected" : true,
       "icon" : "icon-dashboard",
       "parameters" : []
     },
     {
       "name" : "rss",
       "label" : "Les flux RSS",
-      "selected" : false,
+      "selected" : true,
       "icon" : "icon-rss",
       "parameters" : []
     },
     {
       "name" : "library",
       "label" : "Documents Alfresco",
-      "selected" : false,
+      "selected" : true,
       "icon" : "icon-folder-open-alt",
       "parameters" : []
     },
     {
       "name" : "directory",
       "label" : "L'annuaire",
-      "selected" : false,
+      "selected" : true,
       "icon" : "icon-group",
       "parameters" : []
     }
@@ -136,7 +174,7 @@ angular.module('cdaLarochelleApp')
 
   $scope.deselectall = function() {
     for (var i = 0; i < $scope.sources.length; i++) {
-      $scope.sources[i].selected = false;
+      $scope.sources[i].selected = true;
     }
   }
 

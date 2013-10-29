@@ -1,5 +1,5 @@
 
-<section class="">
+<section ng-controller="SearchEngineCtrl" class="">
   <div class="row">
     <section class="col-sm-4">
       <div class="well well-complementary">
@@ -11,7 +11,6 @@
             </input>
           </label>
         </div>
-        <!-- formulaire de critères de sources dynamiques -->
         <form name="sourceForm" class="form-horizontal">
           <div ng-repeat="source in sources" class="checkbox" dragsource data-index="{{$index}}">
             <div class="dropzone" dropsource dropStyle="element-drop" data-index="{{$index}}" ng-show="dropavailable">
@@ -25,18 +24,21 @@
             </label>
             <i class="icon-expand" ng-show="!toggle" ng-click="toggle = !toggle"></i>
             <i class="icon-collapse" ng-show="toggle" ng-click="toggle = !toggle"></i>
-            <div ng-show="toggle" ng-repeat="parameter in source.parameters">
-              <label>
-                {{parameter.label}}
-                <input type="{{parameter.type}}" ng-model="parameter.value"></input>
-              </label>
+            <div ng-show="toggle">
+              <div ng-repeat="parameter in source.parameters">
+                <label>
+                  {{parameter.label}}
+                  <input type="{{parameter.field.type}}" ng-model="parameter.value"></input>
+                </label>
+              </div>
             </div>
           </div>
         </form>
         <div>
           <label>
-            <input type="checkbox" ng-click="deselectall()"></input>
-            Déselection
+            <a href="" ng-click="deselectall()">
+              Tout déselectionner
+            </a>
           </label>
         </div>
       </div>
@@ -65,14 +67,14 @@
             <h4>Groupement</h4>
             <div class="radio">
               <label>
-                <input type="radio" ng-model="group" value="global">
-                Général
+                <input type="radio" ng-model="group" value="source">
+                Par source
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" ng-model="group" value="source">
-                Par source
+                <input type="radio" ng-model="group" value="global">
+                Général
               </label>
             </div>
           </form>
@@ -96,27 +98,37 @@
         </div>
       </div>
       <hr/>
-      <form name="textForm" class="form-horizontal">
-        <input type="text" ng-model="texttosearch" class="form-control" placeholder="Rechercher ..." autofocus>
+      <form name="textForm" class="form-inline">
+
+        <div class="form-group">
+          <label>Recherche par texte</label>
+          <input type="text" ng-model="texttosearch" class="form-control" placeholder="Rechercher ..." autofocus>
+        </div>
+        <div class="form-group">
+          <!-- <label for="inputPassword1" class="col-lg-2 control-label">Password</label> -->
+          <label>Date</label>
+          <select class="form-control" ng-model="testemail" ng-options="period.label for period in periods">
+          </select>
+        </div>
       </form>
       <hr/>
       <!-- Groupement par source -->
       <section ng-repeat="source in sources | sourceSelectedFilter" ng-show="group == 'source'">
         <h4>
           <i class="{{source.name | iconFilter:sources}}"></i>
-          {{source.name}} - {{(documents | groupFilter:source).length}} résultat(s)
+          {{source.name}} - {{(documents | groupFilter:source | periodFilter:testemail).length}} résultat(s)
         </h4>
         <ul class="list-unstyled list-document list-box">
-          <li ng-repeat="document in documents | groupFilter:source | filter:texttosearch | orderBy:sort:!reverse" class="list {{display}}">
+          <li ng-repeat="document in documents | groupFilter:source | periodFilter:testemail | filter:texttosearch | orderBy:sort:!reverse" class="list {{display}}">
             <div my-source></div>
           </li>
         </ul>
       </section>
       <!-- Tout type de source -->
       <section ng-show="group == 'global'">
-        <h4>{{(documents | sourceFilter:sources | filter:texttosearch).length}} résultat(s)</h4>
+        <h4>{{(documents | sourceFilter:sources | periodFilter:testemail | filter:texttosearch).length}} résultat(s)</h4>
         <ul class="list-unstyled list-document">
-          <li ng-repeat="document in documents | sourceFilter:sources | filter:texttosearch | orderBy:sort:!reverse" class="list {{display}}">
+          <li ng-repeat="document in documents | sourceFilter:sources | periodFilter:testemail | filter:texttosearch | orderBy:sort:!reverse" class="list {{display}}">
             <div my-source></div>
           </li>
         </ul>
