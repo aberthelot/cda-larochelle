@@ -5,35 +5,14 @@ angular.module('cdaLarochelleApp')
     return function (items, source) {
 
       var arrayToReturn = [];
+      // on parcourt les items à filtrer
       for (var i=0; i<items.length; i++) {
+        // on vérifie qu'il s'agit bien du bon type de source
         if (source.name == items[i].source.type) {
-
-            var item = items[i];
-            var parametersSource = source.parameters;
-
-            var dismatch = false;
-
-            for (var k = 0; k < parametersSource.length; k++) {
-              //
-              var parameter = parametersSource[k];
-              // parametersSource[k]
-              // console.log(parameter.label);
-
-              // console.log('Model : ' + parameter.model);
-              // console.log('ID : ' + item.id);
-              // console.log('parameter.value : ' + parameter.value + ' =?= item.source[parameter.model] ' + item.source[parameter.model]);
-              dismatch = dismatch || checkMulti(parameter.model, parameter.value, item.source);
-              // console.log('dismatch : ' + dismatch);
-
-            };
-
-            if (!dismatch) {
-              arrayToReturn.push(item);
-            }
-
-
-
-          // arrayToReturn.push(items[i]);
+          // on vérifie que les conditions des paramètres sont bien respectées
+          if (checkItemWithParameters(items[i], source.parameters)) {
+            arrayToReturn.push(items[i]);
+          }
         }
       }
       // console.log(arrayToReturn.length + ' result(s) found');
@@ -57,40 +36,14 @@ angular.module('cdaLarochelleApp')
       var arrayToReturn = [];
       // on parcourt les items à filtrer
       for (var i = 0; i < items.length; i++) {
-        var item = items[i];
-        // console.log('ID item : ' + item.id);
-        // console.log('Nb sources : ' + selectedSources.length);
+        // on parcourt les sources qui ont été sélectionnées
         for (var j = 0; j < selectedSources.length; j++) {
-          var selectedSource = selectedSources[j];
-          // console.log('Test source : ' + selectedSources[j].name +
-          //   ' =?= ' + item.source.type);
-          // filtre par type de source
-          if (selectedSource.name == item.source.type) {
-            var parametersSource = selectedSource.parameters;
-
-            var dismatch = false;
-
-            for (var k = 0; k < parametersSource.length; k++) {
-              //
-              var parameter = parametersSource[k];
-              // parametersSource[k]
-              // console.log(parameter.label);
-
-              // console.log('Model : ' + parameter.model);
-              // console.log('ID : ' + item.id);
-              // console.log('parameter.value : ' + parameter.value + ' =?= item.source[parameter.model] ' + item.source[parameter.model]);
-              dismatch = dismatch || checkMulti(parameter.model, parameter.value, item.source);
-              // console.log('dismatch : ' + dismatch);
-
-            };
-
-            if (!dismatch) {
-              arrayToReturn.push(item);
+          // on vérifie qu'il s'agit bien du bon type de source
+          if (selectedSources[j].name == items[i].source.type) {
+            // on vérifie que les conditions des paramètres sont bien respectées
+            if (checkItemWithParameters(items[i], selectedSources[j].parameters)) {
+              arrayToReturn.push(items[i]);
             }
-
-
-            // console.log('Push item : ' + item.id);
-            
           }
         }
       }
@@ -100,9 +53,28 @@ angular.module('cdaLarochelleApp')
     };
   });
 
-function checkMulti(parameterModel, parameterValue, itemSource) {
+function checkItemWithParameters(item, parametersSource) {
+  var check = true;
+  // on parcourt sur les paramètres de la source
+  for (var k = 0; k < parametersSource.length; k++) {
+    //
+    var parameter = parametersSource[k];
+    // parametersSource[k]
+    // console.log(parameter.label);
 
-  var dismatch = false;
+    // console.log('Model : ' + parameter.model);
+    // console.log('ID : ' + item.id);
+    // console.log('parameter.value : ' + parameter.value + ' =?= item.source[parameter.model] ' + item.source[parameter.model]);
+    check = check && checkMultiMatchingText(parameter.model, parameter.value, item.source);
+    // console.log('check : ' + check);
+
+  };
+  return check
+}
+
+function checkMultiMatchingText(parameterModel, parameterValue, itemSource) {
+
+  var check = true;
 
   // console.log('Parameter model : ' + parameterModel);
 
@@ -116,47 +88,43 @@ function checkMulti(parameterModel, parameterValue, itemSource) {
       //
       // console.log('On est tombé sur un tableau !');
       //
-      var justOneMatch = false;
+      var oneMatch = false;
       for (var i = 0; i < itemSource[split[0]].length; i++) {
 
         // console.log('TEST : ' + itemSource[split[0]][i][split[1]]);
-        if (!checkMatchingText(parameterValue, itemSource[split[0]][i][split[1]])) {
-          justOneMatch = true;
+        if (checkMatchingText(parameterValue, itemSource[split[0]][i][split[1]])) {
+          oneMatch = true;
         }
 
       };
 
-      if (!justOneMatch) {
-        dismatch = true;
+      if (!oneMatch) {
+        check = false;
       } 
 
 
     } else {
-      if (checkMatchingText(parameterValue, itemSource[split[0]][split[1]])) {
-        dismatch = true;
+      if (!checkMatchingText(parameterValue, itemSource[split[0]][split[1]])) {
+        check = false;
       }
     }
-
-
-
-    // itemValue = itemSource[split[0]][split[1]];
   } else {
     itemValue = itemSource[parameterModel];
-    if (checkMatchingText(parameterValue, itemValue)) {
-      dismatch = true;
+    if (!checkMatchingText(parameterValue, itemValue)) {
+      check = false;
     }
   }
 
-  return dismatch;
+  return check;
 }
 
 function checkMatchingText(parameterValue, itemValue) {
 
-  var dismatch = false;
+  var check = true;
 
   if (parameterValue !== '' && itemValue.indexOf(parameterValue) == -1) {
-    dismatch = true;
+    check = false;
   }
-  // console.log('checkMatchingText(' + parameterValue + ', ' + itemValue + ') : ' + dismatch)
-  return dismatch;
+  // console.log('checkMatchingText(' + parameterValue + ', ' + itemValue + ') : ' + check)
+  return check;
 }
