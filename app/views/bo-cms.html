@@ -113,7 +113,7 @@
       <section class="month">
         <!-- <section class="day" ng-repeat="day in daysMonth" drop dropStyle="element-drop" topics="topics"> -->
         <section class="day" ng-repeat="day in daysMonth" drop dropStyle="element-drop" topics="topics">
-        <time datetime="{{day | date:'yyyy-MM-dd'}}">{{day | date:'dd'}}</time>
+        <time datetime="{{day | date:'yyyy-MM-dd'}}">{{day | date:'dd - EEEE'}}</time>
           <article class="category-{{topic.category.id}}" ng-repeat="topic in topics | scheduled:(day)"
             data-id="{{topic.id}}" data-category-id="{{topic.category.id}}">
             <p>
