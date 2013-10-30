@@ -111,7 +111,7 @@
       <section ng-repeat="source in sources | sourceSelectedFilter" ng-show="group == 'source'">
         <h4>
           <i class="{{source.name | iconFilter:sources}}"></i>
-          {{source.name}} - {{(documents | groupFilter:source | filter:texttosearch).length}} résultat(s)
+          {{source.label}} - {{(documents | groupFilter:source | filter:texttosearch).length}} résultat(s)
         </h4>
         <ul class="list-unstyled list-document list-box">
           <li ng-repeat="document in documents | groupFilter:source | filter:texttosearch | orderBy:sort:!reverse" class="list {{display}}">
