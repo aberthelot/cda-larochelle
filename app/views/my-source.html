@@ -33,3 +33,67 @@
   </p>
   <p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>
 </div>
+<!-- spécialisation pour les tâches -->
+<div ng-show="document.source.type == 'todo'">
+  <p>
+    <i class="{{document.source.type | iconFilter:sources}}"></i>
+    <span ng-bind-html-unsafe="document.title | highlight:texttosearch"></span>
+  </p>
+  <p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>
+</div>
+<!-- spécialisation pour les pages -->
+<div ng-show="document.source.type == 'layout'">
+  <p>
+    <i class="{{document.source.type | iconFilter:sources}}"></i>
+    <span ng-bind-html-unsafe="document.title | highlight:texttosearch"></span>
+  </p>
+  <p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>
+</div>
+<!-- spécialisation pour les articles -->
+<div ng-show="document.source.type == 'article'">
+  <p>
+    <i class="{{document.source.type | iconFilter:sources}}"></i>
+    <span ng-bind-html-unsafe="document.title | highlight:texttosearch"></span>
+  </p>
+  <p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>
+</div>
+<!-- spécialisation pour les actualités -->
+<div ng-show="document.source.type == 'topic'">
+  <p>
+    <i class="{{document.source.type | iconFilter:sources}}"></i>
+    <span ng-bind-html-unsafe="document.title | highlight:texttosearch"></span>
+  </p>
+  <p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>
+</div>
+<!-- spécialisation pour les applications -->
+<div ng-show="document.source.type == 'application'">
+  <p>
+    <i class="{{document.source.type | iconFilter:sources}}"></i>
+    <span ng-bind-html-unsafe="document.title | highlight:texttosearch"></span>
+  </p>
+  <p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>
+</div>
+<!-- spécialisation pour les flux rss -->
+<div ng-show="document.source.type == 'rss'">
+  <p>
+    <i class="{{document.source.type | iconFilter:sources}}"></i>
+    <span ng-bind-html-unsafe="document.title | highlight:texttosearch"></span>
+  </p>
+  <p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>
+</div>
+<!-- spécialisation pour les documents -->
+<div ng-show="document.source.type == 'library'">
+  <p>
+    <i class="{{document.source.type | iconFilter:sources}}"></i>
+    <span ng-bind-html-unsafe="document.title | highlight:texttosearch"></span>
+  </p>
+  <p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>
+</div>
+<!-- spécialisation pour l'annuaire' -->
+<div ng-show="document.source.type == 'directory'">
+  <p>
+    <i class="{{document.source.type | iconFilter:sources}}"></i>
+    <span ng-bind-html-unsafe="document.title | highlight:texttosearch"></span>
+  </p>
+  <p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>
+</div>
