@@ -219,7 +219,8 @@ function checkPublishingPeriod(topic, day) {
   var check = true;
 
   // on vérifie que la date de mise à la une appartient bien à la période de publication
-  if (moment(day).isAfter(topic.publishEnd) || moment(day).isBefore(topic.publishBegin)) {
+  if (moment(day).isAfter(moment(topic.publishEnd).startOf('day'))
+    || moment(day).isBefore(moment(topic.publishBegin).startOf('day'))) {
     check = false;
   }
 
