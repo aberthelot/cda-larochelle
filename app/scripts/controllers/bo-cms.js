@@ -5,8 +5,6 @@ angular.module('cdaLarochelleApp')
   // on récupère les sujets d'actualité
   $scope.topics = Topic.query();
 
-  // console.log($scope.topics);
-
   // par défaut on sélectionne le jour en cours
   $scope.daySelected = moment().valueOf();
   // on construit le tableau de jours du mois
@@ -15,6 +13,12 @@ angular.module('cdaLarochelleApp')
   $rootScope.$on('dropEvent', function(evt, id, day, scheduled) {
 
     // console.log('ID : ' + id + ' ; day : ' + day);
+
+    for (var i = 0; i < $scope.topics.length; i++) {
+      console.log('i : ' + i
+        + ', debut : ' + $scope.topics[i].scheduledBegin
+        + ', fin : ' + $scope.topics[i].scheduledEnd);
+    };
 
     // 
     var topic = getTopicFromList(id, $scope.topics);
@@ -70,9 +74,23 @@ angular.module('cdaLarochelleApp')
   });
 
   $scope.cancelScheduling = function(index) {
+
+    for (var i = 0; i < $scope.topics.length; i++) {
+      console.log('i : ' + i
+        + ', debut : ' + $scope.topics[i].scheduledBegin
+        + ', fin : ' + $scope.topics[i].scheduledEnd);
+    };
+    console.log('-_-_-_-_-_-_-_');
+
     $scope.topics[index].isScheduled = false;
     $scope.topics[index].scheduledBegin = "";
     $scope.topics[index].scheduledEnd = "";
+
+    for (var i = 0; i < $scope.topics.length; i++) {
+      console.log('i : ' + i
+        + ', debut : ' + $scope.topics[i].scheduledBegin
+        + ', fin : ' + $scope.topics[i].scheduledEnd);
+    };
   }
 
   $scope.backwardMonth = function() {
