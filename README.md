@@ -70,3 +70,34 @@ Dans une nouvelle fenêtre, se positioner dans le répertoire approprié
 Démarrer l'application
 
 	grunt server
+
+
+## 3. Installation Heroku
+
+### 3.1. Installations requises
+
+1. Installer [Utilitaires Heroku](https://toolbelt.heroku.com/)
+2. Ajouter [Clé SSH Heroku](https://devcenter.heroku.com/articles/keys), il faut s'assurer d'avoir les droits sur l'instance de déploiement
+
+### 3.2. Construction et déploiement
+
+### 3.2.1 Sources Heroku
+
+Dans le dossier dist doit se trouver les sources déployées sur Heroku. Si le dossier n'existe pas, il faut récupérer les sources.
+
+Créer le dossier et récupérer les sources (si non présentes)
+	
+	git clone git@heroku.com:cda-larochelle.git dist
+
+Construire l'application
+
+	grunt build
+
+Se positionner dans le dossier dist
+
+	cd dist
+
+Committer et pousser les modifications sur Heroku
+
+	git commit …
+	git push …
