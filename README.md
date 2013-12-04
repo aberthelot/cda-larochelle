@@ -101,3 +101,13 @@ Committer et pousser les modifications sur Heroku
 
 	git commit …
 	git push …
+
+BON A SAVOIR :
+
+S'assurer des branches distantes
+
+	git remote show
+	
+Si branche distante s'apelle 'origin'
+
+	git config --get remote.origin.url
