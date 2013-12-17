@@ -15,8 +15,14 @@ html, body {
   background: $gray-lighter;
 }
 
+
+p {
+  margin: 0 0 6px;
+}
+
 body {
   font-family: $body-font-family;
+  font-size: 14px;
 }
 
 .danger {
@@ -111,7 +117,7 @@ ul.list-document {
   // }
 }
 ul.list-box {
-  height: 300px;
+  height: 250px;
   overflow: scroll;
 }
 

@@ -1,5 +1,7 @@
 
 <section ng-controller="BoCmsCtrl" class="">
+		  <flash:messages class="slide-down" ng:show="messages"></flash:messages>
+
   <div class="row">
     <section class="col-sm-4">
       <div class="well well-complementary">
@@ -100,9 +102,10 @@
           </button>
           <button class="btn btn-primary" ng-click="forwardMonth()">
             <i class="icon-double-angle-right"></i>
-          </button>
-        </div>
+          </button>       
       </div>
+             
+        </div>
       <section class="month">
         <!-- <section class="day" ng-repeat="day in daysMonth" drop dropStyle="element-drop" topics="topics"> -->
         <section class="day" ng-repeat="day in daysMonth" drop dropStyle="element-drop" topics="topics">

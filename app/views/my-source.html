@@ -9,7 +9,7 @@
       {{document.source.attachment}}
     </span>
     <span class="pull-right">
-      <date ng-bind-html-unsafe="document.source.datereception | date:'shortDate' | highlight:texttosearch"></date>
+      <date ng-bind-html-unsafe="document.source.datereception | date:'dd/MM/yyyy' | highlight:texttosearch"></date>
     </span>
   </p>
   <p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>
@@ -28,7 +28,7 @@
     <i class="{{document.source.type | iconFilter:sources}}"></i>
     <span ng-bind-html-unsafe="document.title | highlight:texttosearch"></span>
     <span class="pull-right">
-      <date ng-bind-html-unsafe="document.source.datemeeting | date:'shortDate' | highlight:texttosearch"></date>
+      <date ng-bind-html-unsafe="document.source.datemeeting | date:'dd/MM/yyyy' | highlight:texttosearch"></date>
     </span>
   </p>
   <p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>
@@ -38,6 +38,9 @@
   <p>
     <i class="{{document.source.type | iconFilter:sources}}"></i>
     <span ng-bind-html-unsafe="document.title | highlight:texttosearch"></span>
+     <span class="pull-right">
+      <date ng-bind-html-unsafe="document.created | date:'dd/MM/yyyy' | highlight:texttosearch"></date>
+    </span>
   </p>
   <p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>
 </div>
@@ -54,6 +57,9 @@
   <p>
     <i class="{{document.source.type | iconFilter:sources}}"></i>
     <span ng-bind-html-unsafe="document.title | highlight:texttosearch"></span>
+     <span class="pull-right">
+      <date ng-bind-html-unsafe="document.created | date:'dd/MM/yyyy' | highlight:texttosearch"></date>
+    </span>
   </p>
   <p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>
 </div>
@@ -62,6 +68,9 @@
   <p>
     <i class="{{document.source.type | iconFilter:sources}}"></i>
     <span ng-bind-html-unsafe="document.title | highlight:texttosearch"></span>
+     <span class="pull-right">
+      <date ng-bind-html-unsafe="document.created | date:'dd/MM/yyyy' | highlight:texttosearch"></date>
+    </span>
   </p>
   <p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>
 </div>
@@ -78,6 +87,9 @@
   <p>
     <i class="{{document.source.type | iconFilter:sources}}"></i>
     <span ng-bind-html-unsafe="document.title | highlight:texttosearch"></span>
+     <span class="pull-right">
+      <date ng-bind-html-unsafe="document.created | date:'dd/MM/yyyy' | highlight:texttosearch"></date>
+    </span>
   </p>
   <p class="detail" ng-bind-html-unsafe="document.content | highlight:texttosearch"></p>
 </div>

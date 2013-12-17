@@ -1,7 +1,9 @@
 'use strict';
 
+
+
 angular.module('cdaLarochelleApp')
-.controller('BoCmsCtrl', function ($scope, $rootScope, Topic) {
+.controller('BoCmsCtrl', function ($scope, $rootScope, Topic, flash) {
   // on récupère les sujets d'actualité
   $scope.topics = Topic.query();
 
@@ -10,8 +12,11 @@ angular.module('cdaLarochelleApp')
   // on construit le tableau de jours du mois
   $scope.daysMonth = buildCalendar($scope.daySelected);
 
+
   $rootScope.$on('dropEvent', function(evt, id, day, scheduled) {
 
+        $scope.messages='';
+  
     // console.log('ID : ' + id + ' ; day : ' + day);
 
     for (var i = 0; i < $scope.topics.length; i++) {
@@ -23,15 +28,14 @@ angular.module('cdaLarochelleApp')
     // 
     var topic = getTopicFromList(id, $scope.topics);
 
-
     if (!checkPublishingPeriod(topic, day)) {
-      alert('La date de mise à la une n\'appartient pas à la période de publication');
+      flash('error', 'La date de mise à la une n\'appartient pas à la période de publication');
     } else {
 
       if ('begin' === scheduled) {
         // console.log(scheduled);
         if (moment(day).isAfter(topic.scheduledEnd)) {
-          alert('Impossible de mettre une date de début après une date de fin');
+           flash('error', 'Impossible de mettre une date de début après une date de fin');
         } else {
           var scheduledEnd;
           if (topic.scheduledEnd == null || topic.scheduledEnd == "") {
@@ -40,7 +44,7 @@ angular.module('cdaLarochelleApp')
             scheduledEnd = topic.scheduledEnd;
           }
           if (!checkAvailableCategory(topic, day, scheduled, $scope.topics)) {
-            alert('Chevauchement entre les actualités');
+            flash('error', 'Chevauchement entre les actualités');
           } else {
             topic.scheduledBegin = day;
             topic.scheduledEnd = scheduledEnd;
@@ -49,7 +53,8 @@ angular.module('cdaLarochelleApp')
         }
       } else {
         if (moment(day).isBefore(topic.scheduledBegin)) {
-          alert('Impossible de mettre une date de fin après une date de début');
+           flash('error','Impossible de mettre une date de fin après une date de début');
+
         } else {
 
           var scheduledBegin;
@@ -59,7 +64,7 @@ angular.module('cdaLarochelleApp')
             scheduledBegin = topic.scheduledBegin;
           }
           if (!checkAvailableCategory(topic, day, scheduled, $scope.topics)) {
-            alert('Chevauchement entre les actualités');
+              $scope.$parent.error = "Chevauchement entre les actualités";
           } else {
             topic.scheduledBegin = scheduledBegin;
             topic.scheduledEnd = day;

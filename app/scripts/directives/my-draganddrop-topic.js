@@ -114,9 +114,11 @@ draganddroptopic.directive('drop', function($rootScope) {
     var droppableElement = getDroppableElement(evt);
     var day = droppableElement.querySelectorAll('time')[0].getAttribute('datetime');
     //
-    if (checkDroppingTopic(id, day, scheduled, topics)) {
+    //if (checkDroppingTopic(id, day, scheduled, topics)) {
       $rootScope.$broadcast('dropEvent', id, day, scheduled);
-    }
+    //}
+
+
 
   };
   
