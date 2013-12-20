@@ -111,3 +111,11 @@ S'assurer des branches distantes
 Si branche distante s'apelle 'origin'
 
 	git config --get remote.origin.url
+	
+	
+## 4. TODO
+
+- Merger la branche de c.Parageaud
+- Afficher le calendrier des actualités en semaines
+- Dans le moteur de recherche, définir et finir l'affinage des recherches par typologie
+- Uniformiser les messages d'erreurs pour le calendrier
